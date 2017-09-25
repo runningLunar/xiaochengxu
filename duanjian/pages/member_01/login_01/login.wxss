@@ -1,0 +1,19 @@
+.sec01{
+  width: 750rpx;
+  height: 450rpx;
+  background: #ccc;
+  text-align: center;
+  overflow: hidden
+}
+.sec01 image{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 75rpx;
+}
+.box{
+  margin-top: 80rpx;
+}
+.login{
+  margin-top: 20rpx;
+  color: #fff;
+}

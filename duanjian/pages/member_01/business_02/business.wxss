@@ -1,0 +1,52 @@
+page{
+  background: #F6F6F6;
+}
+.top{
+  padding: 24rpx;
+  background: #1ABC9C;
+  width: 750rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #fff;
+  text-align: center;
+  position: relative
+}
+.back{
+  position: absolute;
+  top: 24rpx;
+  left: 24rpx;
+}
+/* .top End */
+.list{
+  width: 750rpx;
+}
+.list-item{
+  padding: 24rpx 16rpx;
+  width: 750rpx;
+  height: 60rpx;
+  display: flex;
+  justify-content: space-around;
+  background: #fff;
+}
+.item-name{
+  display: inline-block;
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 570rpx;
+  margin: 0 20rpx;
+  font-size: 28rpx;
+}
+.item-name .name{
+  float: left;
+}
+.item-name .num{
+  padding: 0 10rpx;
+  float: right;
+}
+.space{
+  margin-bottom: 8rpx;
+}
+.list image{
+  width: 66rpx;
+  height: 60rpx;
+}

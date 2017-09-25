@@ -1,0 +1,14 @@
+
+page{
+  background: #F4F4F4;
+}
+
+.top{
+  display: flex;
+  justify-content: space-between;
+  padding: 24rpx;
+  height: 60rpx;
+  background: #3498DB;
+  line-height: 60rpx;
+  color: #fff;
+}

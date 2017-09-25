@@ -1,0 +1,8 @@
+<view class="sec01">
+  <view class='box'>
+    <image src='../../../images/default.jpg'></image>
+  </view>
+  <view class='login'>
+    <text>点击登录或注册</text>
+  </view>
+</view>
