@@ -1,0 +1,10 @@
+<!-- 我的数据图表 -->
+<view class="box">
+  <view class='top'>
+    <text>返回</text>
+    <text>我的数据图表</text>
+    <text>我的</text>
+  </view>
+  
+
+</view>

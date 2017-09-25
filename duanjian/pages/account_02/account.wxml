@@ -1,0 +1,102 @@
+<!-- 我的账号 -->
+<view class="top">
+  <text class='back'>返回</text>
+  <text>我的账户</text>
+</view>
+
+<view class='list'>
+
+  <view class='list-item'>
+    <image src='../../images/account_01.png'></image>
+    <view class='item-name'>
+      <text class='name'>我的资金</text>
+      <text class='num blue radius'>0.00元</text>
+    </view>
+    <image src='../../images/next.png'></image>
+  </view>
+  
+  <view class='list-item'>
+    <image src='../../images/account_01.png'></image>
+    <view class='item-name'>
+      <text class='name'>保证金</text>
+      <text class='num red radius'>0.00元</text>
+    </view>
+    <image src='../../images/next.png'></image>
+  </view>
+
+  <view class='list-item'>
+    <image src='../../images/account_02.png'></image>
+    <view class='item-name'>
+      <text class='name'>我的积分</text>
+      <text class='num blue radius'>34点</text>
+    </view>
+    <image src='../../images/next.png'></image>
+  </view>
+
+  <view class='list-item'>
+    <image src='../../images/account_03.png'></image>
+    <view class='item-name'>
+      <text class='name'>短信余额</text>
+      <text class='num red radius'>0条</text>
+    </view>
+    <image src='../../images/next.png'></image>
+  </view>
+
+  <view class='list-item'>
+    <image src='../../images/account_04.png'></image>
+    <view class='item-name'>
+      <text class='name'>我要充值</text>
+    </view>
+    <image src='../../images/next.png'></image>
+  </view>
+
+  <view class='list-item space'>
+    <image src='../../images/account_05.png'></image>
+    <view class='item-name'>
+      <text class='name'>修改资料</text>
+    </view>
+    <image src='../../images/next.png'></image>
+  </view>
+
+  <view class='list-item'>
+    <image src='../../images/account_05.png'></image>
+    <view class='item-name'>
+      <text class='name'>我的认证</text>
+    </view>
+    <image src='../../images/next.png'></image>
+  </view>
+
+  <view class='list-item'>
+    <image src='../../images/account_06.png'></image>
+    <view class='item-name'>
+      <text class='name'>我的商友</text>
+    </view>
+    <image src='../../images/next.png'></image>
+  </view>
+
+  <view class='list-item'>
+    <image src='../../images/account_07.png'></image>
+    <view class='item-name'>
+      <text class='name'>商机收藏</text>
+    </view>
+    <image src='../../images/next.png'></image>
+  </view>
+
+  <view class='list-item'>
+    <image src='../../images/account_08.png'></image>
+    <view class='item-name'>
+      <text class='name'>我的关注</text>
+    </view>
+    <image src='../../images/next.png'></image>
+  </view>
+
+  <view class='list-item'>
+    <image src='../../images/account_09.png'></image>
+    <view class='item-name'>
+      <text class='name'>贸易提醒</text>
+    </view>
+    <image src='../../images/next.png'></image>
+  </view>
+
+
+</view>

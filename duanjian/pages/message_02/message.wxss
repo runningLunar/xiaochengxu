@@ -1,0 +1,33 @@
+
+page{
+  background: #F4F4F4;
+}
+.box{
+  background: #fff;
+}
+.top{
+  display: flex;
+  justify-content: space-between;
+  padding: 24rpx;
+  height: 60rpx;
+  background: #3498DB;
+  line-height: 60rpx;
+  color: #fff;
+}
+.content{
+  padding: 32rpx;
+  font-size: 38rpx;
+  word-spacing: 25rpx;
+}
+.demo{
+  margin-bottom: 20rpx;
+}
+.theme{
+  color: #0062cc;
+  margin-bottom: 25rpx;
+}
+.remark{
+  color: #8f8f94;
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,68 @@
+<!-- 交易管理 -->
+<view class="top">
+  <text class='back'>返回</text>
+  <text>交易管理</text>
+</view>
+
+<view class='list'>
+
+  <view class='list-item space'>
+    <view class='item-name'>
+      <text class='name'>我的订单</text>
+      <text class='num'>买家</text>
+    </view>
+    <image src='../../images/next.png'></image>
+  </view>
+  
+  <view class='list-item space'>
+    <view class='item-name'>
+      <text class='name'>我是商家</text>
+      <text class='num'>卖家</text>
+    </view>
+    <image src='../../images/next.png'></image>
+  </view>
+
+  <view class='list-item space'>
+    <view class='item-name'>
+      <text class='name'>团购订单</text>
+      <text class='num'>买家</text>
+    </view>
+    <image src='../../images/next.png'></image>
+  </view>
+
+  <view class='list-item space'>
+    <view class='item-name'>
+      <text class='name'>充值记录</text>
+      <text class='num'>充值</text>
+    </view>
+    <image src='../../images/next.png'></image>
+  </view>
+
+  <view class='list-item space'>
+    <view class='item-name'>
+      <text class='name'>保证金</text>
+      <text class='num'>增资</text>
+    </view>
+    <image src='../../images/next.png'></image>
+  </view>
+
+  <view class='list-item space'>
+    <view class='item-name'>
+      <text class='name'>资金提现</text>
+      <text class='num'>提现</text>
+    </view>
+    <image src='../../images/next.png'></image>
+  </view>
+
+  <view class='list-item space'>
+    <view class='item-name'>
+      <text class='name'>收货地址</text>
+      <text class='num'>添加</text>
+    </view>
+    <image src='../../images/next.png'></image>
+  </view>
+
+
+
+
+</view>

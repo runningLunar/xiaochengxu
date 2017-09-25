@@ -1,0 +1,12 @@
+<!-- 站内交谈 -->
+<view class="box">
+  <view class='top'>
+    <text>我的</text>
+    <text>站内交谈</text>
+    <text>创建</text>
+  </view>
+  <view class='container'>
+    暂无对话
+  </view>
+
+</view>

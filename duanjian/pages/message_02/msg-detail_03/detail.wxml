@@ -1,0 +1,14 @@
+<view class="box">
+  <view class='top'>
+    <text>返回</text>
+    <text>消息详情</text>
+    <text>删除</text>
+  </view>
+  <view class='container'>
+     <view class=''>
+      <text class='title'>欢迎加入中国锻件网</text>
+      <text class='date'>2017-09-24 15:23</text>
+     </view>
+  </view>
+
+</view>

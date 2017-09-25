@@ -1,0 +1,163 @@
+
+@import "../template/template.wxss";
+page{
+  background: #f6f6f6;
+}
+.nav-menu {
+  border-bottom: 1rpx solid #e6e6e6;
+  width: 100%;
+  display: flex;
+  background: white; 
+}
+.nav-menu view {
+  flex: auto;
+  overflow: hidden;
+  text-align: center;
+  line-height: 84rpx;
+  font-size: 32rpx;
+  color: #828385;
+}
+
+.nav-menu view:nth-child(2n) {
+  border-left: 1rpx solid #e6e6e6;
+  border-right: 1rpx solid #e6e6e6;
+}
+.back{
+   background: rgba(0, 0, 0, .2);
+    width: 100%;
+  height: 100%;
+}
+.head {
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+      position: fixed;  
+}
+.show {
+  display: flex;
+  width: 100%;
+}
+.show view{
+  width: 50%;
+  overflow: hidden;
+   background: #f2f2f2;
+}
+.show .left text{
+display: block;
+text-align: center;
+  background: white;
+}
+.show .right text{
+  display: block;
+  text-align: center;
+}
+.show text{
+  line-height: 88rpx;
+  font-size: 32rpx;
+  color: #4a4a4a;
+  border-bottom: 1rpx solid #e6e6e6;
+}
+
+/* //搜索框 */
+.search{
+  width: 95%;
+  margin:20rpx auto;
+  display: flex;
+  background: white;
+  border-radius: 10rpx;
+  height: 72rpx;
+}
+.sea{
+  padding-top: 90rpx;
+}
+.search .img{
+  width: 15%;
+  height: 100%;
+  text-align: center;
+}
+.search image{
+  width: 40rpx;
+  height:40rpx; 
+  margin-top:15rpx; 
+}
+.search input{
+  width: 100%;
+  height: 100%;
+  font-size: 32rpx;
+}
+
+
+/*详细内容  */
+.contentt {
+  background: white;
+    border-top:solid 1rpx #dddddd; 
+}
+.contentt .xianxi{
+  display: flex;
+  border-bottom:solid 1rpx #dddddd; 
+}
+.contentt .xianxi .left{
+  width: 30%;
+  overflow: hidden;
+   margin-top:20rpx;
+ margin-bottom: 20rpx; 
+}
+.contentt .xianxi .left image{
+  width: 150rpx;
+  height:180rpx; 
+  margin: 10rpx 32rpx;
+}
+.contentt .xianxi .right{
+  width: 70%;
+  flex-direction: row;
+   margin-top:20rpx;
+ margin-bottom: 20rpx; 
+}
+.contentt .xianxi .right .t-add{
+   font-size: 23rpx;
+   margin-top:18rpx;
+ color: #757575;
+}
+.contentt .xianxi .right .t-add .address{
+    width: 20%;
+     display: inline-block;
+}
+.contentt .xianxi .right .t-add .time{
+  width: 80%;
+  display: inline-block;
+}
+.contentt .xianxi .right .company{
+  font-size: 30rpx;
+    color: #757575;
+}
+.contentt .xianxi .right .name{
+  font-size:36rpx;
+  margin-bottom: 20rpx;
+  margin-top:20rpx; 
+
+}
+.foot{
+  padding-bottom:384rpx;
+}
+
+
+.page{
+  width: 80%;
+  margin: 0rpx auto;
+  padding: 50rpx 0rpx 20rpx; 
+  
+}
+.page text{
+  display: inline-block;
+  width: 20%;
+  text-align: center;
+  font-size: 32rpx;
+}
+
+.action{
+ background: #f2f2f2 !important;
+}
+.btn{
+  width: 100%;
+  height: 300rpx;
+}

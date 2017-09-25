@@ -1,0 +1,98 @@
+<view class="container">
+  <view class="nav">
+    <text>首页 > 锻件供应 > 法兰锻件</text>
+  </view>
+  <view class="Carousel">
+    <view class="title">承插弯头 不锈钢弯头 耐高压 抗腐蚀</view>
+    <view class="date">2017-09-14 09:17</view>
+    <!--轮播  -->
+    <swiper
+      indicator-dots="{{true}}"
+      circular="{{true}}"
+      autoplay="{{true}}"
+      interval="4000"
+      style="height:250px;width:100%"
+    >
+        <swiper-item>
+              <image src="../../images/1.jpg" style="width:100%"></image>    
+        </swiper-item>
+         <swiper-item>
+         <image src="../../images/2.jpg" style="width:100%"></image>
+         </swiper-item>
+    </swiper>
+  </view>
+  <view class="price">
+    <view class="t">价格:未填</view>
+    <view class="t">品牌:君政承插</view>
+  </view>
+  <button type="primary" class="btn"> 发送询价 </button>
+  <view class="gy">
+    <view class="gyxx">
+    <view class="gy-l">logo</view>
+    <view class="gy-c"><view class="gs">盐山君政承插管件有限公司</view>
+    
+      <view class="gs">我是供应商</view>
+      </view>
+    <view class="gy-r">></view>
+      </view>
+      <view class="btn-t">
+      <view class="btn2">全部锻件供应</view>
+      <view class="btn2">进入商铺</view>
+      </view>
+  </view>
+  <view class="js">
+  <view class="present">
+  承插弯头，主要是由圆钢或钢锭模压锻造毛坯成型，然后经车床机加工成型的
+  </view>
+  <view class="present">
+  一种高压弯头管道连接配件。是锻制承插系列管件的一种
+  </view>
+  <view class="present">
+  承插弯头常用标准有 标GB/T14383-93,GB/T14383-2008,美标ASME B16.11,石化标准
+  </view>
+  <view class="present">SH3410，化工部标准 HG/T21634等按照形式分为45°承插弯头和90°承插弯头按照常用</view>
+  <view class="present">标准规定，承插弯头的规格有 DN6、DN8、DN10、DN15、DN20、DN25、DN32、DN40、</view>
+  <view class="present">DN50、DN65、DN80、DN100。一般常用的使用订货规格为 DN15----DN50。如有超出范</view>
+  <view class="present">围该规格范围的，可与客户沟通图纸设计加工。 按照压力等级区分：3000LB、6000LB、</view>
+  <view class="present">9000LB 或 SCH80、SCH160、XXS</view>
+  <view class="present">主要适用于石油化工、医药卫生、电力、航天、军工、消防、冶金、造船、燃气、核电、</view>
+  <view class="present">及环境保护等要求承受压力高、尺寸精密等部门及领域。</view>
+  </view>
+  <view class="lxfs">联系方式</view>
+  <view class="jtlxfs">
+公司:盐山君政承插管件有限公司</view>
+<view class="jtlxfs">
+状态:离线 发送信件 在线交谈</view>
+<view class="jtlxfs">
+姓名:马经理(先生)</view>
+<view class="jtlxfs">电话:0317-8522606 8525819</view>
+<view class="jtlxfs">手机:13703172679</view>
+<view class="jtlxfs">传真:0317-6087578</view>
+<view class="jtlxfs">地区:河北-沧州市</view>
+<view class="jtlxfs">地址:盐山县盐山镇大李庄</view>
+<view class="jtlxfs">邮件:13703172679@139.com</view>
+
+<view class='share'>
+  <view class='share-t'><image src="../../images/guanzhu.png"></image>人关注<image src="../../images/dianzan.png"></image>人点赞 <text>举报</text></view>
+  <view class='share-c'>分享到：<image src="../../images/qqkj.png"></image>
+                                <image src="../../images/xlwb.png"></image>
+                                <image src="../../images/wywb.png"></image>
+                                <image src="../../images/gdfx.png"></image>
+  </view>
+</view>
+
+<view class='bottom-list'>
+    <view class='bl-t'>同类锻件供应 </view>
+    <view class='bl-c'>承插管箍 单承口管箍 不锈钢 耐高压 </view>
+    <view class='bl-c'>承插管箍 单承口管箍 不锈钢 耐高压 </view>
+    <view class='bl-c'>承插管箍 单承口管箍 不锈钢 耐高压 </view>
+    <view class='bl-c'>承插管箍 单承口管箍 不锈钢 耐高压 </view>
+</view>
+
+<view class="nav-bottom">
+<view class="sc"><image src="../../images/xx.png"></image>收藏</view>
+<view class="xj"><image src="../../images/xj.png"></image>询价</view>
+<view class="ljlx"><image src="../../images/lx.png"></image>立即联系</view>
+<view class="zxjt">在线交谈</view>
+</view>
+</view>

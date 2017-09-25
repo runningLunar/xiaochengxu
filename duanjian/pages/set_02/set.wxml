@@ -1,0 +1,61 @@
+<!-- 设置 -->
+<view class="top">
+  <text class='back'>返回</text>
+  <text>系统设置</text>
+</view>
+
+<view class='list'>
+
+  <view class='list-item'>
+    <image src='../../images/set_01.png'></image>
+    <view class='item-name'>
+      <text class='name'>声音提醒</text>
+      <switch checked class='switch'/>
+    </view>
+    <view class='blank'></view>
+  </view>
+  
+  <view class='list-item'>
+    <image src='../../images/set_02.png'></image>
+    <view class='item-name'>
+      <text class='name'>允许定位</text>
+      <switch checked class='switch'/>
+    </view>
+    <view class='blank'></view>
+  </view>
+
+  <view class='list-item'>
+    <image src='../../images/set_03.png'></image>
+    <view class='item-name'>
+      <text class='name'>消息推送</text>
+      <switch checked class='switch'/>
+    </view>
+    <view class='blank'></view>
+  </view>
+
+  <view class='list-item'>
+    <image src='../../images/set_04.png'></image>
+    <view class='item-name'>
+      <text class='name'>清除缓存</text>
+      <text class='num red radius'>0M</text>
+    </view>
+    <image src='../../images/next.png'></image>
+  </view>
+
+  <view class='list-item'>
+    <image src='../../images/set_05.png'></image>
+    <view class='item-name'>
+      <text class='name'>意见反馈</text>
+    </view>
+    <image src='../../images/next.png'></image>
+  </view>
+
+  <view class='list-item space'>
+    <image src='../../images/set_06.png'></image>
+    <view class='item-name'>
+      <text class='name'>退出后台</text>
+    </view>
+    <image src='../../images/next.png'></image>
+  </view>
+
+</view>

@@ -1,0 +1,18 @@
+<!-- 站内信 -->
+<view class="box">
+  <view class='top'>
+    <text>返回</text>
+    <text>站内信</text>
+    <text>+发送</text>
+  </view>
+  <view class='content'>
+    <view class='demo'>
+     <view class='theme'>欢迎加入中国锻件网</view>
+     <view class='remark'>
+      <text class='sender'>系统信使</text>
+      <text class='date'>2017/09/11 18:32</text>
+     </view>
+    </view>
+  </view>
+
+</view>

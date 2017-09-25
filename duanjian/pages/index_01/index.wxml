@@ -1,0 +1,137 @@
+<!-- 会员中心 -->
+<view class="box">
+
+  <view class='home'>
+    <view class="sec01">
+      <view class='top'>
+        <text bindtap='move'>快捷操作</text>
+        <text>用户中心</text>
+        <text>首页</text>
+      </view>
+      <view class='per_info'>
+        <view class='per_photo'>
+          <image src='../../images/default.jpg'></image>
+        </view>
+        <view class='name'>
+          <text>卢家敏</text>
+          <text>（Jimmy）</text>
+        </view>  
+      </view>
+    </view>
+    <view class='sec02'>
+      <view class='capital'>
+        <view class='num color01'>0.00元</view>
+        <view class='type'>我的资金</view>
+      </view>
+      
+      <view class='integral'>
+        <view class='num color02'>23点</view>
+        <view class='type'>我的积分</view>
+      </view>
+
+      <view class='order'>
+        <view class='num color03'>0</view>
+        <view class='type'>我的订单</view>
+      </view>
+    </view>
+
+    <view class='sec03'>
+      <view class='message'>
+        <image src='../../images/index_01.png'></image>
+        <text>站内信件</text>
+        <image src='../../images/next.png' class='next'></image>
+      </view>
+
+      <view class='chat'>
+        <image src='../../images/index_02.png'></image>
+        <text>站内交流</text>
+        <image src='../../images/next.png' class='next'></image>
+      </view>
+
+      <view class='cart'>
+        <image src='../../images/index_03.png'></image>
+        <text>购物车</text>
+        <image src='../../images/next.png' class='next'></image>
+      </view>
+    </view>
+
+    <view class='sec04'>
+      <view class='account'>
+        <image src='../../images/index_04.png'></image>
+        <text>
+          <text>我的账号</text>
+          <text class='detail'>资料—认证—充值</text>
+        </text>
+        <image src='../../images/next.png' class='next'></image>
+      </view>
+
+      <view class='info'>
+        <image src='../../images/index_05.png'></image>
+        <text>
+          <text>信息管理</text>
+          <text class='detail'>发布—修改信息</text>
+        </text>
+        <image src='../../images/next.png' class='next'></image>
+      </view>
+
+      <view class='business'>
+        <image src='../../images/index_06.png'></image>
+        <text>交易管理</text>
+        <image src='../../images/next.png' class='next'></image>
+      </view>
+    </view>
+
+    <view class='sec05'>
+      <view class='set'>
+        <image src='../../images/index_07.png'></image>
+        <text>
+          <text>系统设置</text>
+          <text class='detail'>设置</text>
+        </text>
+        <image src='../../images/next.png' class='next'></image>
+      </view>
+
+      <view class='mydata'>
+        <image src='../../images/index_08.png'></image>
+        <text>
+          <text>我的数据</text>
+          <text class='detail new'>new</text>
+        </text>
+        <image src='../../images/next.png' class='next'></image>
+      </view>
+    </view>
+
+    <view class='sec06'>
+      <text class='button'>退出登录</text>
+    </view>
+
+  </view>
+
+  <view class='side-menu'>
+    <view class='top02'>
+      <image src="../../images/default.jpg" class='head-picture'></image>
+      <text class='name02'>卢家敏</text>
+    </view>
+    <view>
+      <view class='title'>快捷菜单</view>
+      <view class='list'>锻件供应添加</view>
+      <view class='list'>锻件采购添加</view>
+      <view class='list'>锻件展会添加</view>
+      <view class='list'>锻件资讯添加</view>
+      <view class='list'>锻件知识添加</view>
+    </view>
+    <view>
+      <view class='title'>其他项目</view>
+      <view class='list'>首页</view>
+      <view class='list'>频道</view>
+      <view class='list'>退出后台</view>
+    </view>
+  </view>
+
+</view>
+
+
+
+
+
+

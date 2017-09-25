@@ -1,0 +1,34 @@
+<view class="sjlogin zhlogin">
+  <view class="formBox">
+    <view class="box">
+      <input type="text" placeholder-class="psection" placeholder="会员名称4-20字符，小写字母和数字" name="userPhone" bindinput="userNameInput" />
+    </view>
+    <view class="box">
+      <input type="text" placeholder-class="psection" placeholder="登陆密码6-20个字符" name="userPhone" bindinput="userPwdInput" />
+    </view>
+    <view class="box">
+      <input type="text" placeholder-class="psection" placeholder="手机号码 请真是填写，提交后需验证" name="userPhone" bindinput="userPhoneInput" />
+    </view>
+    <view class="box">
+      <input placeholder-class="psection" placeholder="手机验证码" name="code" bindinput="userCodeInput" />
+      <button bindtap="onSendmes">发送</button>
+    </view>
+    <view>
+
+      <movable-area class="moveBar">
+        <view class="changBar" style='width:{{trapX*10}}%'>
+          <text class="welcome">{{showWelcome}}</text>
+
+        </view>
+        <movable-view bindtouchmove='tap' class="drag" direction="horizontal">
+          <image src="../../images/grag.png"></image>
+        </movable-view>
+      </movable-area>
+    </view>
+    <text class="agress">已经阅读并同意注册协议以上全部为必填项目</text>
+    <button bindtap="doReg">立即注册</button>
+  </view>
+</view>
+<view class="tips" animation="{{animationData}}" hidden="{{hiddenTips!=0}}">
+  <text>{{showTips}}</text>
+</view>

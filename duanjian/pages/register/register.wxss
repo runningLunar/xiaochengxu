@@ -1,0 +1,134 @@
+.zhlogin .formBox{
+  background: #fff;
+  padding-bottom: 40rpx;
+}
+.zhlogin .box{
+  width: 100%;
+  display: flex;
+}
+.zhlogin .box input{
+  flex: 90;
+  width: 100%;
+  border-bottom: 1px solid #dddddd;
+  height: 100rpx;
+  float: right;
+  padding-top: 10rpx;
+  padding-left: 50rpx;
+
+}
+.zhlogin .box image{
+  flex: 10;
+  width:20rpx;
+  height: 40rpx;
+  margin-left: 15rpx;
+  margin-top: 40rpx;
+  margin-right: 10px;
+  display: inline-block;  
+
+}
+.psection{
+  font-size: 16px;
+  color: #a9a9a9;
+}
+.zhlogin button{
+  margin-top:50rpx; 
+  width: 90%;
+  background: #03a9f4;
+  color: #fff;
+}
+.zhlogin .bottom{
+  background: #f5f5f5;
+  width: 100%;
+  height: 800rpx;
+  padding-top: 30rpx;
+  border-radius: 2rpx;
+  
+}
+.zhlogin .bottom .two{
+  height: 100rpx;
+  width: 100%;
+  display: flex;
+
+}
+.zhlogin .bottom .two text{
+  flex: 1;
+  line-height: 100rpx;
+  text-align: center;
+  background: #FFF;
+  
+}
+.sjlogin .formBox .box button{
+  display: block;
+  width: auto;
+  height: 70rpx;
+  position: absolute;
+  right: 45rpx;
+  top:310rpx;
+  font-size: 30rpx;
+  line-height: 70rpx;
+  text-align: center;
+}
+.tips{
+width: auto;
+height: 60rpx;
+border: 1px solid #ccc;
+background: black;
+position: absolute;
+opacity: 0.6;
+top:800rpx;
+left:250rpx;
+border-radius:20rpx; 
+text-align: center;
+line-height: 60rpx;
+padding: 0 50rpx;
+  
+}
+.tips text{
+font-size: 28rpx;
+color: #FFF;
+text-align: center;
+opacity: 1;
+
+}
+.agress{
+  color: grey;
+  font-size: 24rpx;
+  margin-top: 50rpx;
+  margin-left: 50rpx;
+  display: block;
+}
+.moveBar{
+  width: 90%;
+  height: 80rpx;
+  background: #dae2d0;
+  border-radius:8rpx;
+  margin: 40rpx auto;
+  position: relative;
+}
+.moveBar .changBar{
+  height: 100%;
+  width: 50%;
+  background:#03a9f4;
+  border-radius: 8rpx; 
+}
+.moveBar .welcome{
+  font-size: 32rpx;
+  position: absolute;
+  top:15rpx;
+  left: 35%;
+  color: #FFF;
+}
+.moveBar .drag image{
+  width: 60%;
+  height: 80%;
+  margin-left: 20rpx;
+  margin-top: 7rpx;
+} 
+.moveBar .drag{
+  height: 80rpx;
+  width: 100rpx;
+  background: #FFF;
+  border: 1rpx solid #ccc;
+  padding-top: 4rpx;
+  margin-top: -4rpx;
+}

@@ -1,0 +1,45 @@
+<!-- 信息管理 -->
+<view class="top">
+  <text class='back'>返回</text>
+  <text>信息管理</text>
+</view>
+
+<view class='list'>
+
+  <view class='list-item'>
+    <view class='item-name'>
+      <text class='name'>锻件供应管理</text>
+    </view>
+    <image src='../../images/next.png'></image>
+  </view>
+
+  <view class='list-item'>
+    <view class='item-name'>
+      <text class='name'>锻件采购管理</text>
+    </view>
+    <image src='../../images/next.png'></image>
+  </view>
+
+  <view class='list-item'>
+    <view class='item-name'>
+      <text class='name'>锻件展会管理</text>
+    </view>
+    <image src='../../images/next.png'></image>
+  </view>
+
+  <view class='list-item'>
+    <view class='item-name'>
+      <text class='name'>锻件资讯管理</text>
+    </view>
+    <image src='../../images/next.png'></image>
+  </view>
+
+  <view class='list-item'>
+    <view class='item-name'>
+      <text class='name'>锻件知识管理</text>
+    </view>
+    <image src='../../images/next.png'></image>
+  </view>
+
+
+</view>

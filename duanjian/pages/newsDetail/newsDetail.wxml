@@ -1,0 +1,51 @@
+<import src="../../wxParse/wxParse.wxml"/>
+<view class="header">
+  <view class="title">{{title}}</view>
+  <view class="msg">
+    <text wx:if="{{sourse}}">来源：{{sourse}}</text>
+    <icon type="waiting" size="10" color="grey"/>
+    <text>{{time}}</text>
+    <icon class="iconfont icon-browse"></icon>
+    <text>{{watched}}</text>
+  </view>
+</view>
+<view class="depart-line" style="height:0.08rem;"></view>
+<view class="content">
+  <template is="wxParse" data="{{wxParseData:content.nodes}}"></template>
+</view>
+<view class="depart-line" style="height:0.8rem;"></view>
+<view class="share">
+  <view class="left follow" bindtap="follow">
+    <icon class="iconfont icon-favorite" />
+    <text>{{followNum}}人关注</text>
+  </view>
+  <view class="left zan" bindtap="zan">
+    <icon class="iconfont icon-good" />
+    <text>{{zanNum}}人点赞</text>
+  </view>
+  <text class="right" bindtap="report">举报</text>
+  <view class="clean"></view>
+  <view class="share-btn">
+    <text>分享到：</text>
+    <icon class="iconfont icon-qqkongjian" />
+    <icon class="iconfont icon-tengxunweibo" />
+    <icon class="iconfont icon-weibo" />
+    <icon class="iconfont icon-gengduo" />
+  </view>
+</view>
+<view class="depart-line" style="height:0.6rem;"></view>
+<view class="other">
+  <text class="title">同类咨询</text>
+  <view wx:for="{{other}}">
+    <view class="depart-line" style="height:0.04rem"></view>
+    {{item.title}}
+  </view>
+</view>
+<view class="depart-line" style="height:1.8rem;"></view>
+<view class="footer">
+  <input type="text" class="comment" placeholder="我来说两句" />
+  <icon class=".iconfont .icon-pinglun" style="font-size:1rem;"/>
+</view>
+<view wx:if="{{toTopStatus}}" class="to-top" bindtap="toTop">
+  T
+</view>

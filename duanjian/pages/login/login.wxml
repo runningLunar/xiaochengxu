@@ -1,0 +1,84 @@
+<view class="nav">
+  <view class="navCont">
+    <block wx:for="{{navArr}}">
+      <text catchtap="onNavTap" data-index="{{index}}" style="color:#03a9f4">{{item}}</text>
+    </block>
+  </view>
+  <view class="bar" style="transform:translateX({{offLeft+'px'}})">
+  </view>
+</view>
+
+
+<swiper current="{{currentTab}}" bindchange="onBindChange" style="height:{{screenHeight + 'px'}};">
+  <swiper-item>
+    <scroll-view scroll-y style="height:{{screenHeight + 'px'}}">
+      <view class="zhlogin" hidden="{{currentTab != 0}}">
+        <view class="formBox">
+          <view class="box">
+            <image src="../../images/people.png"></image>
+            <input type="text" placeholder-class="psection" placeholder="用户名/email/已认证手机" name="userName" bindinput="userNameInput" />
+          </view>
+          <view class="box">
+            <image src="../../images/lock.png"></image>
+            <input type="password" placeholder-class="psection" placeholder="请填写密码" name="userPwd" bindinput="userPwdInput" />
+          </view>
+          <button bindtap="onSubmit">登陆</button>
+        </view>
+        <view class="tips" animation="{{animationData}}" hidden="{{hiddenTips!=0}}">
+          <text>{{showTips}}</text>
+        </view>
+        <view class="bottom">
+          <view class="two">
+            <text bindtap="doReg">注册账号</text>
+            <text>忘记密码</text>
+          </view>
+          <view class="otherlogin">
+            <text>其他方式登陆</text>
+            <view class="img">
+              <image src="../../images/wx.png"></image>
+              <image src="../../images/wb.png"></image>
+              <image src="../../images/QQ.png"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+
+
+  <swiper-item>
+    <scroll-view scroll-y style="height:{{screenHeight + 'px'}}">
+      <view class="sjlogin zhlogin" hidden="{{currentTab != 1}}">
+        <view class="formBox">
+          <view class="box">
+            <image src="../../images/sj.png"></image>
+            <input type="text" placeholder-class="psection" placeholder="手机号码" name="userPhone" bindinput="userPhoneInput" />
+          </view>
+          <view class="box">
+            <image src="../../images/yzm.png" style="width:10rpx;height:40rpx"></image>
+            <input placeholder-class="psection" placeholder="手机验证码" name="code" bindinput="userCodeInput" />
+            <button bindtap="onSendmes">{{send}}</button>
+          </view>
+          <button bindtap="onShowTips2">登陆</button>
+        </view>
+        <view class="tips" animation="{{animationData}}" hidden="{{hiddenTips!=0}}">
+          <text>{{showTips}}</text>
+        </view>
+        <view class="bottom">
+          <view class="two">
+            <text bindtap="doReg">注册账号</text>
+            <text>忘记密码</text>
+          </view>
+          <view class="otherlogin">
+            <text>其他方式登陆</text>
+            <view class="img">
+              <image src="../../images/wx.png"></image>
+              <image src="../../images/wb.png"></image>
+              <image src="../../images/QQ.png"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+</swiper>

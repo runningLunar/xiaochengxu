@@ -1,0 +1,123 @@
+/* pages/template/template.wxss */
+.login{
+  display: flex;
+  margin-top: 20rpx;
+}
+.login text{
+  font-size: 28rpx;
+  display: block;
+  width: 25%;
+  text-align: center;
+  color: #666666;
+  margin-bottom: 10rpx;
+}
+.foot{
+    font-size: 28rpx;
+    text-align: center;
+    display: block;
+    margin-top: 20rpx;
+    color: #666666;
+    padding-bottom: 200rpx;
+}
+.share{
+  display: flex;
+   border-bottom:1rpx solid grey; 
+   overflow: hidden;
+}
+.share .content{
+  flex: auto;
+  overflow: hidden;
+  text-align: center;
+  padding-top: 50rpx;
+  padding-bottom: 20rpx;
+}
+.share .content image{
+  width: 40rpx;
+  height: 45rpx;
+}
+.share .content text{
+  display: block;
+  font-size: 28rpx;
+   color: #666666;
+}
+.template{
+  background:#f5f5f5;
+}
+
+
+/*导航栏  */
+.nav-menu {
+  border-bottom: 1rpx solid #e6e6e6;
+  width: 100%;
+  display: flex;
+  background: white; 
+}
+.nav-menu view {
+  flex: auto;
+  overflow: hidden;
+  text-align: center;
+  line-height: 84rpx;
+  font-size: 32rpx;
+  color: #828385;
+}
+
+.nav-menu view:nth-child(2n) {
+  border-left: 1rpx solid #e6e6e6;
+  border-right: 1rpx solid #e6e6e6;
+}
+
+.head {
+  width: 100%;
+  height: 1%;
+  z-index: 1000;
+      position: fixed;  
+}
+.back{
+   background: rgba(0, 0, 0, .2);
+    width: 100%;
+  height: 100%;
+}
+.show {
+  display: flex;
+  width: 100%;
+}
+.show view{
+  width: 50%;
+  overflow: hidden;
+   background: #f2f2f2;
+}
+.left,.right {
+  width: 50%;
+  float: left;
+}
+.cate .right{
+ background: #f2f2f2;
+ height:450rpx;
+}
+ .left text{
+display: block;
+text-align: center;
+  background: white;
+}
+ .right text{
+  display: block;
+  text-align: center;
+}
+ text{
+  line-height: 88rpx;
+  font-size: 32rpx;
+  color: #4a4a4a;
+  border-bottom: 1rpx solid #e6e6e6;
+}
+.head .btn{
+  width: 100%;
+  height: 1000rpx;
+}
+.nav-menu .active{
+  color:#03a9f4;
+}
+.order text{
+  display: block;
+  background: white;
+  padding-left:20rpx; 
+}
