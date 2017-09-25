@@ -1,9 +1,9 @@
 {
   "pages": [
+            "pages/register/register",
+      "pages/ll/ll",
     "pages/index/index",
     "pages/sellorbuy/sellorbuy",
-
-    "pages/register/register",
     "pages/login/login",
 
     "pages/goodsdetail/goodsdetail",
@@ -12,9 +12,7 @@
     "pages/zixun/zixun",
     "pages/template/template",
     "pages/more/more",
-
     "pages/newsDetail/newsDetail",
-
     "pages/message_02/msg-detail_03/detail",
     "pages/data_02/data",
     "pages/set_02/set",
