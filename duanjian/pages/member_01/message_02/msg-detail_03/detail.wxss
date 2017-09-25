@@ -1,0 +1,43 @@
+page{
+  background: #F4F4F4;
+}
+.top{
+  display: flex;
+  justify-content: space-between;
+  padding: 24rpx;
+  height: 60rpx;
+  background: #3498DB;
+  line-height: 60rpx;
+  color: #fff;
+}
+.content{
+  background: #fff;
+  padding: 12rpx 20rpx;
+}
+.theme{
+  text-align: center;
+}
+.title{
+  font-size: 36rpx;
+  font-weight: bold;
+  padding: 16rpx
+}
+.date{
+  font-size: 20rpx;
+  color: #8f8f94;
+  padding: 16rpx;
+  border-bottom: 2rpx solid #8f8f94;
+}
+.logo{
+  padding: 25rpx;
+  border-bottom: 1rpx solid #8f8f94;
+}
+.logo image{
+  width: 360rpx;
+  height: 120rpx;
+}
+.message{
+  font-size: 30rpx;
+}
+
+
