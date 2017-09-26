@@ -1,7 +1,7 @@
 {
   "pages": [
-            "pages/register/register",
-      "pages/ll/ll",
+    "pages/register/register",
+    "pages/ll/ll",
     "pages/index/index",
     "pages/sellorbuy/sellorbuy",
     "pages/login/login",
@@ -13,15 +13,18 @@
     "pages/template/template",
     "pages/more/more",
     "pages/newsDetail/newsDetail",
-    "pages/message_02/msg-detail_03/detail",
-    "pages/data_02/data",
-    "pages/set_02/set",
-    "pages/business_02/business",
-    "pages/info-mange_02/info",
-    "pages/account_02/account",
-    "pages/message_02/message",
-    "pages/chat_02/chat",
-    "pages/index_01/index"
+
+    "pages/member_01/index",
+    "pages/member_01/login_01/login",
+      "pages/member_01/message_02/message",
+        "pages/member_01/message_02/msg-detail_03/detail",
+      "pages/member_01/data_02/data",
+      "pages/member_01/set_02/set",
+      "pages/member_01/business_02/business",
+      "pages/member_01/info-manage_02/info",
+      "pages/member_01/account_02/account",
+      "pages/member_01/chat_02/chat"
+
   ],
   "window": {
     "backgroundTextStyle": "light",

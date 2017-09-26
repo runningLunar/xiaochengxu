@@ -1,12 +1,11 @@
-
-.container{
+.container1 {
   position: relative;
-   justify-content: space-between;
+  justify-content: space-between;
   box-sizing: border-box;
-  color: #000000;
-  
+  color: #000;
 }
-.nav{
+
+.nav {
   height: 1.2rem;
   background: #03a9f4;
   display: flex;
@@ -14,40 +13,44 @@
   text-align: center;
   padding: 0.5rem 0.5rem 0.5rem 0.9rem;
 }
-.nav .rtn{
+
+.nav .rtn {
   font-size: 0.8rem;
   color: #fff;
 }
+
 .nav .rtn:after {
-    content: '';
-    align-items: center;
-    width: 0.4rem;
-    height: 0.4rem;
-    position: absolute;
-    left: 0.5rem;
-    margin-top: 0.3rem;
-    background: transparent;
-    border: 2px solid #fff;
-    border-bottom: none;
-    border-left: none;
-    -webkit-border-radius: 0;
-    border-radius: 0;
-    -webkit-transform: rotate(-135deg);
-    transform: rotate(-135deg);
+  content: '';
+  align-items: center;
+  width: 0.4rem;
+  height: 0.4rem;
+  position: absolute;
+  left: 0.5rem;
+  margin-top: 0.3rem;
+  background: transparent;
+  border: 2px solid #fff;
+  border-bottom: none;
+  border-left: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
 }
-.nav .pd{
+
+.nav .pd {
   font-size: 0.9rem;
   color: #fff;
 }
-.nav .nav-menu{
-  
+
+.nav .nav-menu {
 }
-.nav .nav-menu image{
+
+.nav .nav-menu image {
   width: 1.5rem;
   height: 1.5rem;
 }
 
-.container .nav-menu-content{
+.container .nav-menu-content {
   width: 100%;
   height: 100%;
   background: #000;
@@ -55,21 +58,23 @@
   position: absolute;
   z-index: 2;
 }
+
 .container .nav-menu-content:before {
-    content: '';
-    align-items: center;
-    width: 0.8rem;
-    height: 0.8rem;
-    position: absolute;
-    right: 0.9rem;
-    margin-top: 0.2rem;
-    background: #fff;
-    -webkit-border-radius: 0;
-    border-radius: 0;
-    -webkit-transform: rotate(-135deg);
-    transform: rotate(-135deg);
+  content: '';
+  align-items: center;
+  width: 0.8rem;
+  height: 0.8rem;
+  position: absolute;
+  right: 0.9rem;
+  margin-top: 0.2rem;
+  background: #fff;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
 }
-.container .nav-menu-list{
+
+.container .nav-menu-list {
   background: #fff;
   position: absolute;
   top: 2.6rem;
@@ -81,57 +86,64 @@
   overflow: hidden;
 }
 
-.container .nav-menu-list .nav-menu-item{
+.container .nav-menu-list .nav-menu-item {
   padding: 0.5rem 1.5rem 0.5rem 0.5rem;
   border-bottom: 1px solid #ccc;
 }
-.container .nav-menu-list .nav-menu-item:last-child{
+
+.container .nav-menu-list .nav-menu-item:last-child {
   border-bottom: none;
 }
-.container .nav-menu-list .nav-menu-item:nth-child(1){
+
+.container .nav-menu-list .nav-menu-item:nth-child(1) {
   margin-left: -0.6rem;
 }
-.container .nav-menu-list .nav-menu-item:nth-child(4){
+
+.container .nav-menu-list .nav-menu-item:nth-child(4) {
   margin-left: -0.6rem;
 }
-.container .nav-menu-list .nav-menu-item image{
+
+.container .nav-menu-list .nav-menu-item image {
   width: 0.9rem;
   height: 0.9rem;
   margin-right: 0.2rem;
   margin-bottom: -0.1rem;
 }
 
-.channel_list{
+.channel_list {
   padding-left: 10px;
   background-color: #fff;
   border-bottom: 1px solid #ccc;
 }
-.channel_list .channel_list_item{
+
+.channel_list .channel_list_item {
   border-bottom: 1px solid #ebeced;
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   animation-iteration-count: center;
   min-height: 2rem;
   font-size: 0.8rem;
   align-items: center;
 }
-.channel_list .channel_list_item:last-child{
+
+.channel_list .channel_list_item:last-child {
   border: none;
 }
+
 .channel_list_item .tli:before {
-    content: '';
-    align-items: center;
-    width: 0.4rem;
-    height: 0.4rem;
-    position: absolute;
-    right: 0.75rem;
-    margin-top: 0.3rem;
-    background: transparent;
-    border: 1px solid #dddddd;
-    border-top: none;
-    border-right: none;
-    -webkit-border-radius: 0;
-    border-radius: 0;
-    -webkit-transform: rotate(-135deg);
-    transform: rotate(-135deg);
+  content: '';
+  align-items: center;
+  width: 0.4rem;
+  height: 0.4rem;
+  position: absolute;
+  right: 0.75rem;
+  margin-top: 0.3rem;
+  background: transparent;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-right: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
 }
