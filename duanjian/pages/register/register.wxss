@@ -125,10 +125,11 @@ opacity: 1;
   margin-top: 7rpx;
 } 
 .moveBar .drag{
-  height: 80rpx;
+  height: 76rpx;
   width: 100rpx;
   background: #FFF;
   border: 1rpx solid #ccc;
-  padding-top: 4rpx;
-  margin-top: -4rpx;
+  position: relative;
+  left:0rpx;
+  
 }

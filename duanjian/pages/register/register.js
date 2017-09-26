@@ -7,7 +7,18 @@ Page({
     userPhone:'',
     code:'',
     trapX:0,
-    showWelcome:'拖动完成验证'
+    showWelcome:'拖动完成验证',
+    move:true
+  },
+  onLoad: function (options) {
+   var that=this;
+    wx.getSystemInfo({
+      success: function (res) {
+        that.setData({
+          eleWidth: res.windowWidth
+        })
+      }
+    });
   },
   userNameInput: function (e) {
     this.setData({
@@ -67,27 +78,48 @@ Page({
 
   },
   tap:function(ev){
-    var x = ev.touches[0].clientX
-    this.setData({
-      trapX:(x/30-1)
-    })
-    if (this.data.trapX>=10){
-      this.setData({
-        trapX: 10,
-        showWelcome:'验证完成'
-      }) 
+    var x = ev.touches[0].clientX - ev.target.offsetLeft;//移动框原点位 
+    var eeWidth = this.data.eleWidth - ev.target.offsetLeft-80;
+    // //bar的宽度
+    var eleWidth = this.data.eleWidth - ev.target.offsetLeft * 2;
+    if (x > eeWidth){
+      x = eeWidth
+    }else if(x<0){
+      x=0
+    }
+    if(this.data.move){
+     var barWidth=x;
+     this.setData({
+       trapX: barWidth,
+       barWidth: barWidth,
+       width: eleWidth,
+       left:x,
+     })
+    }
+  },
+  touchEnd:function(ev){
+    var that=this;
+    var eeWidth = this.data.eleWidth - ev.target.offsetLeft -80;
+    if (this.data.left >= eeWidth){
+      that.setData({
+        barWidth: eeWidth,
+        move:false,
+        showWelcome: '完成验证'
+      })
       setTimeout(function () {
         this.setData({
           showWelcome: '中国锻件网欢迎你'
         })
       }.bind(this), 1000)
-    }
-
-    if(this.data.trapX<=0){
+    }else{
+      ev.target.offsetLeft=0;
       this.setData({
         trapX: 0,
+        left:0,
+        barWidth: 0,
+        move: true,
         showWelcome: '拖动完成验证'
-      }) 
+      })
     }
-  }
+  },
 })
