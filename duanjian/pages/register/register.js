@@ -81,6 +81,7 @@ Page({
     var x = ev.touches[0].clientX - ev.target.offsetLeft;//移动框原点位 
     var eeWidth = this.data.eleWidth - ev.target.offsetLeft-80;
 
+    
     // //bar的宽度
     var eleWidth = this.data.eleWidth - ev.target.offsetLeft * 2;
     if (x > eeWidth){
@@ -99,16 +100,29 @@ Page({
     }
   },
   touchEnd:function(ev){
+
+    var that=this;
+    var eeWidth = this.data.eleWidth - ev.target.offsetLeft -80;
+    if (this.data.left >= eeWidth){
+
     console.log(ev);
     var that=this;
     console.log("rdd");
     var eeWidth = this.data.eleWidth - ev.target.offsetLeft -80;
     if (this.data.left == eeWidth){
+
       that.setData({
         barWidth: eeWidth,
         move:false,
         showWelcome: '完成验证'
       })
+
+      setTimeout(function () {
+        this.setData({
+          showWelcome: '中国锻件网欢迎你'
+        })
+      }.bind(this), 1000)
+
     }else{
       ev.target.offsetLeft=0;
       this.setData({
@@ -120,7 +134,10 @@ Page({
       })
     }
   },
+
+
   startTap:function(ev){
       console.log(ev);
   }
+
 })

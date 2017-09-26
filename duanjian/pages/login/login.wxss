@@ -91,7 +91,7 @@ border: 1px solid #ccc;
 background: black;
 position: absolute;
 opacity: 0.6;
-top:480rpx;
+top:380rpx;
 left:200rpx;
 border-radius:20rpx; 
 text-align: center;
@@ -117,7 +117,7 @@ opacity: 1;
   padding:40rpx 0rpx;  
 }
 .otherlogin .img image{
-  width: 50rpx;
-  height: 50rpx;
-  margin: 50rpx 0 0 20rpx ;
+  width: 55rpx;
+  height: 55rpx;
+  margin: 50rpx 0 0 30rpx ;
 }
