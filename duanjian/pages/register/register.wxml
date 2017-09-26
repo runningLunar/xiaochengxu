@@ -13,17 +13,15 @@
       <input placeholder-class="psection" placeholder="手机验证码" name="code" bindinput="userCodeInput" />
       <button bindtap="onSendmes">发送</button>
     </view>
-    <view>
+    <view class='moveBar'>
 
-      <movable-area class="moveBar">
-        <view class="changBar" style='width:{{trapX*10}}%'>
+        <view class="changBar" style='width:{{trapX}}px'>
           <text class="welcome">{{showWelcome}}</text>
-
-        </view>
-        <movable-view bindtouchmove='tap' class="drag" direction="horizontal">
+          <view class='drag' style='left:{{left}}px' bindtouchmove='tap' bindtouchend='touchEnd' bindtap='getWidth'>
           <image src="../../images/grag.png"></image>
-        </movable-view>
-      </movable-area>
+          </view>
+        </view>
+        
     </view>
     <text class="agress">已经阅读并同意注册协议以上全部为必填项目</text>
     <button bindtap="doReg">立即注册</button>

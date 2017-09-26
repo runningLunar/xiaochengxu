@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/register/register",
+    "pages/ll/ll",
     "pages/index/index",
     "pages/sellorbuy/sellorbuy",
-
-    "pages/register/register",
     "pages/login/login",
 
     "pages/goodsdetail/goodsdetail",
@@ -12,7 +12,6 @@
     "pages/zixun/zixun",
     "pages/template/template",
     "pages/more/more",
-
     "pages/newsDetail/newsDetail",
 
     "pages/member_01/index",
@@ -25,6 +24,7 @@
       "pages/member_01/info-manage_02/info",
       "pages/member_01/account_02/account",
       "pages/member_01/chat_02/chat"
+
   ],
   "window": {
     "backgroundTextStyle": "light",
