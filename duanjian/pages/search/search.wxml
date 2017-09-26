@@ -1,0 +1,15 @@
+<!--pages/search/search.wxml-->
+<import src="../template/template.wxml"/>
+<view>
+<view class='container'>
+  <input type='text' value="{{cate}}" bindtap='cateShow'></input>
+  <view class='show' wx:if="{{show}}">
+    <text wx:for="{{djCate}}" bindtap="changeCate" bindtouchmove="changeStyle" data-id="{{index}}"wx:key="dd" class="{{index==cateId?'creative':''}}">{{item}}</text>
+  </view>
+  <input type='text' placeholder='请输入关键字'></input>
+  <button>搜索</button>
+</view>
+<view class='template'>
+<template is="item" />
+</view>
+</view>

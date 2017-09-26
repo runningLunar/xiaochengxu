@@ -59,5 +59,25 @@ Page({
         floorstatus: false
       });
     }
+  },
+
+
+    // 跳转
+  tosorb: function () {
+    wx.navigateTo({
+      url: '../sellorbuy/sellorbuy'
+    })
+  },
+  tomy: function () {
+    wx.navigateTo({
+      url: '../member_01/login_01/login'
+    })
+  },
+  tochannel: function () {
+    wx.navigateTo({
+      url: '../channel/channel'
+    })
   }
+
+
 })

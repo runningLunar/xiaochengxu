@@ -10,7 +10,7 @@
     </view>
 
     <!--轮播图  -->
-    <swiper class='swiper' indicator-dots="true" indicator-color="#ffffff" indicator-active-color="#0f69dc" autoplay="{{autoplay}}" interval="3000" duration="1000" circular="true">
+    <swiper class='swiper' indicator-dots="true" indicator-color="#ffffff" indicator-active-color="#0f69dc" autoplay="{{autoplay}}" interval="3000" duration="1000" circular="true" bindtap='tosorb'>
       <swiper-item wx:for="{{imgUrls}}" wx:key="jm">
         <image src="{{item}}" class="slide-image" />
       </swiper-item>
@@ -401,7 +401,7 @@
     <image src='../../images/index.png'></image>
     <text>首页</text>
   </view>
-  <view class='b-mitem'>
+  <view class='b-mitem' bindtap='tochannel'>
     <image src='../../images/heart.png'></image>
     <text>频道</text>
   </view>
@@ -409,7 +409,7 @@
     <image class='b-jiahao' src='../../images/jiahao.png'></image>
     <text></text>
   </view>
-  <view class='b-mitem'>
+  <view class='b-mitem' bindtap='tomy'>
     <image src='../../images/hpic.png'></image>
     <text>我的</text>
   </view>

@@ -1,6 +1,6 @@
 function getProvence(callback,parentid){
   wx.request({
-    url: "http://localhost/zgdjw/public/area/area/get",
+    url: "http://localhost/zgdjw/public/api/area/get",
     header: {
       'content-type': 'application/json',
        "Authorization": 'APPCODE 0f42d91c4d884fe9a4b7e90f14412456'
@@ -18,7 +18,7 @@ function getProvence(callback,parentid){
 //获取资讯
 function getZixun(callback,page) {
   wx.request({
-    url: "http://localhost/zgdjw/public/zixun/zixun/index",
+    url: "http://localhost/zgdjw/public/api/zixun/index",
     header: {
       'content-type': 'application/json',
     },

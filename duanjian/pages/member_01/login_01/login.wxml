@@ -1,0 +1,9 @@
+<view class="sec01">
+  <view class='box'>
+    <image src='../../../images/default.jpg'></image>
+  </view>
+  <view class='login' bindtap='tologin'>
+    <text>点击登录或注册</text>
+  </view>
+</view>
+<image class='bg' src='../../../images/headerbg.png'></image>

@@ -1,5 +1,5 @@
 // newsDetail.js
-var WxParse = require('../../wxParse/wxParse.js');
+var WxParse = require('../wxParse/wxParse.js');
 
 Page({
 
