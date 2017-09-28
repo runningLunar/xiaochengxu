@@ -1,6 +1,6 @@
 function getProvence(callback,parentid){
   wx.request({
-    url: "http://localhost/zgdjw/public/api/area/get",
+    url:"http://localhost/zdj/xiaochengxu/zgdjw/public/api/area/get",
     header: {
       'content-type': 'application/json',
        "Authorization": 'APPCODE 0f42d91c4d884fe9a4b7e90f14412456'
