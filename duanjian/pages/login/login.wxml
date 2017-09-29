@@ -9,9 +9,8 @@
 </view>
 
 
-<swiper current="{{currentTab}}" bindchange="onBindChange" style="height:{{screenHeight + 'px'}};">
+<swiper current="{{currentTab}}" bindchange="onBindChange" style="height:700rpx;">
   <swiper-item>
-    <scroll-view scroll-y style="height:{{screenHeight + 'px'}}">
       <view class="zhlogin" hidden="{{currentTab != 0}}">
         <view class="formBox">
           <view class="box">
@@ -42,12 +41,10 @@
           </view>
         </view>
       </view>
-    </scroll-view>
   </swiper-item>
 
 
   <swiper-item>
-    <scroll-view scroll-y style="height:{{screenHeight + 'px'}}">
       <view class="sjlogin zhlogin" hidden="{{currentTab != 1}}">
         <view class="formBox">
           <view class="box">
@@ -57,12 +54,9 @@
           <view class="box">
             <image src="../../images/yzm.png" style="width:10rpx;height:40rpx"></image>
             <input placeholder-class="psection" placeholder="手机验证码" name="code" bindinput="userCodeInput" />
-            <button bindtap="onSendmes">{{send}}</button>
+            <button bindtap="onSendmedds" bindInput=" userCodeInput" class="{{click?'':'greydd'}}">{{send}}</button>
           </view>
           <button bindtap="onShowTips2">登陆</button>
-        </view>
-        <view class="tips" animation="{{animationData}}" hidden="{{hiddenTips!=0}}">
-          <text>{{showTips}}</text>
         </view>
         <view class="bottom">
           <view class="two">
@@ -79,6 +73,5 @@
           </view>
         </view>
       </view>
-    </scroll-view>
   </swiper-item>
 </swiper>

@@ -8,7 +8,10 @@ Page({
     ],
     showView: true,
     scrollTop: 0,
-    currentTab: 0,
+    currentTab1: 0,//控制1f
+    currentTab2: 0,//控制2f
+    currentTab3: 0,//控制3f
+  
   },
 
   onLoad: function (options) {
@@ -26,22 +29,48 @@ Page({
    * 滑动切换tab
    */
   bindChange: function (e) {
-    var that = this;
-    that.setData({ currentTab: e.detail.current });
+    var id = e.target.dataset.id;
+    if(id==1){
+      this.setData({ currentTab1: e.detail.current });
+    } else if (id == 2){
+      this.setData({ currentTab2: e.detail.current });
+    }else{
+      this.setData({ currentTab3: e.detail.current });
+    }
   },
 
   /**
    * 点击切换tab
    */
   swichNav: function (e) {
-    var that = this;
-    if (this.data.currentTab === e.target.dataset.current) {
-      return false;
-    } else {
-      that.setData({
-        currentTab: e.target.dataset.current
-      })
-    }
+    var id= e.target.dataset.id;
+    console.log(id);
+   if(id==1){
+     if (this.data.currentTab1 === e.target.dataset.current) {
+       return false;
+     } else {
+       this.setData({
+         currentTab1: e.target.dataset.current
+       })
+     }
+   }else if(id==2){
+     if (this.data.currentTab2 === e.target.dataset.current) {
+       return false;
+     } else {
+       this.setData({
+         currentTab2: e.target.dataset.current
+       })
+     }
+   }else{
+     if (this.data.currentTab3 === e.target.dataset.current) {
+       return false;
+     } else {
+       this.setData({
+         currentTab3: e.target.dataset.current
+       })
+     }
+   }
+
   },
 
   goTop: function (e) {

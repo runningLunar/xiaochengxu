@@ -1,35 +1,29 @@
 {
-  "pages": [
+   "pages": [
+            "pages/login/login",
+      "pages/member_01/index",
+      "pages/register/register",
       "pages/index/index",
-      "pages/login/login",
-    "pages/register/register",
-    "pages/ll/ll",
-    "pages/sellorbuy/sellorbuy",
-
-    "pages/goodsdetail/goodsdetail",
-    "pages/channel/channel",
-
-    "pages/zixun/zixun",
-    "pages/template/template",
-    "pages/more/more",
-    "pages/newsDetail/newsDetail",
-
-    "pages/member_01/index",
-    "pages/member_01/login_01/login",
-      "pages/member_01/message_02/message",
-        "pages/member_01/message_02/msg-detail_03/detail",
+      "pages/sellorbuy/sellorbuy",
+      "pages/goodsdetail/goodsdetail",
+      "pages/channel/channel",
+      "pages/zixun/zixun",
+      "pages/template/template",
+      "pages/more/more",
+      "pages/newsDetail/newsDetail",
+      "pages/member_01/login_01/login",
+      "pages/member_01/message_02/message",   "pages/member_01/message_02/msg-detail_03/detail",
       "pages/member_01/data_02/data",
       "pages/member_01/set_02/set",
       "pages/member_01/business_02/business",
       "pages/member_01/info-manage_02/info",
       "pages/member_01/account_02/account",
       "pages/member_01/chat_02/chat"
-
-  ],
-  "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#0f69dc",
-    "navigationBarTitleText": "中国锻件网",
-    "navigationBar bindtap='onChangeShowState'  TextStyle": "while"
-  }
+   ],
+   "window": {
+      "backgroundTextStyle": "light",
+      "navigationBarBackgroundColor": "#0f69dc",
+      "navigationBarTitleText": "中国锻件网",
+      "navigationBar bindtap='onChangeShowState'  TextStyle": "while"
+   }
 }

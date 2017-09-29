@@ -3,11 +3,6 @@
 
   <view class="home {{showSide?'hide':'show'}}">
     <view class="sec01">
-      <view class='top'>
-        <text bindtap='move'>快捷操作</text>
-        <text>用户中心</text>
-        <text>首页</text>
-      </view>
       <view class='per_info'>
         <view class='per_photo'>
           <image src='../../images/default.jpg'></image>

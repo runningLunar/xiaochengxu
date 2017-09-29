@@ -27,15 +27,7 @@ page{
   height: 400rpx;
   background: #9BA1B6;
   position: relative;
-}
-.top{
-  padding: 24rpx;
-  display: flex;
-  justify-content: space-between;
-  height: 50rpx;
-  font-size: 28rpx;
-  line-height: 50rpx;
-  color: #fff;
+  overflow: hidden;
 }
 .per_info{
   width: 750rpx;
