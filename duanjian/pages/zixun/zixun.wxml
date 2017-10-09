@@ -3,27 +3,31 @@
 <!--查找数据  -->
 <view class='sea'>
   <view class='search'>
-    <view class='img'>
-      <image src='../image/1.png'></image>
+    <view class='img' bindtap='search' >
+      <image src='../../images/1.png' ></image>
     </view>
-    <input type='text' placeholder='请输入搜索的内容'></input>
+    <input type='text' bindinput='keyword' placeholder='请输入搜索的内容' class='{{keyword?"quxiao":""}}' value="{{keyword}}"></input>
+    <text wx-if="{{keyword}}" class='delete' bindtap='quxiao'>取消</text>
   </view>
 </view>
 <!--详细数据  -->
+<view class="none" wx-if="{{zixun.length==0}}">该类暂时没有讯息</view>
 <view class='contentt'>
   <view class='xianxi' wx:for="{{zixun}}" wx:key="dd" data-id='{{item.itemid}}'>
     <view class='right'>
       <view class='name'>{{item.title}}</view>
-       <view class='keyword'>{{item.keyword}}</view>
+       <view class='keyword'>{{item.catname}} 
+         <image src='../../images/message.png' class='message'></image>
+       </view>
     </view>
       <view class='left'>
-      <image src='../image/01.jpg'></image>
+      <image src='../../images/01.jpg'></image>
     </view>
   </view>
 
 
   <view class='template'>
-    <view class='page'>
+    <view class='page' wx-if="{{zixun.length!=0}}">
       <text>{{current_page}}/{{last_page}}</text>
       <text  bindtap="prevPage">上一页</text>
       <text bindtap="nextPage">下一页</text>

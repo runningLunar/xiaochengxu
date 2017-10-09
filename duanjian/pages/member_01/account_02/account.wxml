@@ -1,8 +1,5 @@
 <!-- 我的账号 -->
-<view class="top">
-  <text class='back' bindtap='back'>返回</text>
-  <text>我的账户</text>
-</view>
+
 
 <view class='list'>
 

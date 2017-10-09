@@ -1,9 +1,4 @@
 <view class="box">
-  <view class='top'>
-    <text bindtap='back'>返回</text>
-    <text>消息详情</text>
-    <text>删除</text>
-  </view>
   <view class='content'>
      <view class='theme'>
       <view class='title'>欢迎加入中国锻件网</view>

@@ -1,65 +1,74 @@
 <template name="item">
-<view class="container">
-<view class="share">
-  <view class='content'>
-    <image src='../../image/app.png'></image>
-    <text>触摸版</text>
-  </view>
- <view class='content'>
-    <image src='../../image/xon.png'></image>
-    <text>电脑版</text>
-  </view>
-   <view class='content'>
-    <image src='../../image/ewm.png'></image>
-    <text>微信版</text>
-  </view>
-</view>
-<view class='login'>
-  <text>登录/注册</text>
-  <text>意见反馈</text>
-  <text>联系方式</text>
-  <text>关于我们</text>
- </view> 
- <text class='foot'>站点地图 Copyright by 中国锻件网</text>
-  </view>
+   <view class="container">
+      <view class="share">
+         <view class='content'>
+            <image src='../../images/app.png'></image>
+            <text>触摸版</text>
+         </view>
+         <view class='content'>
+            <image src='../../images/xon.png'></image>
+            <text>电脑版</text>
+         </view>
+         <view class='content'>
+            <image src='../../images/ewm.png'></image>
+            <text>微信版</text>
+         </view>
+      </view>
+      <view class='login'>
+         <text>登录/注册</text>
+         <text>意见反馈</text>
+         <text>联系方式</text>
+         <text>关于我们</text>
+      </view>
+      <text class='foot'>站点地图 Copyright by 中国锻件网</text>
+   </view>
 </template>
 
 <template name="head">
-  <view class=" head  {{background==true ?'back':''}}" >
-  <view class="nav-menu">
-    <view data-id='1' bindtap='cateShow' class='active'>{{cateTitle}}</view>
-    <view bindtap='show' class='{{active?"active":" "}}' data-id='2'>{{areaTitle}}</view>
-    <view data-id='3' bindtap='orderTap'class='{{activeId==3?"active":" "}}'>排序方式</view>
-  </view>
+   <view class=" head {{show?'back':''}}">
+      <view class="nav-menu">
+         <view data-id='1' class='active' bindtap='cateShow'>{{cateTitle}}</view>
+         <view class='{{tab1==2?"active":" "}} {{activeId==2?"active":" "}}' data-id='2' bindtap='getProvence'>{{areaTitle}}</view>
+         <view data-id='3' class='{{tab2==3?"active":" "}}' bindtap='getOrder'>排序方式</view>
+      </view>
 
-<view class='cate' wx-if="{{activeId==1}}" >
- <view class='left'>
-  <text wx:for="{{cate}}" bindtap='getCate' class="{{index==aid ? 'action':''}}" wx:key="dd" bindtap='changeCate' data-index='{{index}}'>{{item}}</text>
-  </view>
-  <view class='right'>
-  <text wx:for="{{ cateContent}}" data-id="{{index+1}}" bindtap='cateTitle' class="{{index==aid ? 'action':''}}" wx:key="dd" >{{item}}</text>
-  </view>
-</view>
+      <view class='nav-content'>
+         <view class='cate' wx-if="{{activeId==1}}">
+            <view class='left'>
+               <scroll-view scroll-y style="height: 450rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-top="{{scrollTop}}">
+                  <text bindtap='allCate' class="{{-1==gid ? 'action':''}}">全部分类</text>
+                  <text wx:for="{{firstArray}}" bindtap='getCate' class="{{index==gid ? 'action':''}}" wx:key="dd" bindtap='getSecondCate' data-index='{{index}}' >{{item.catname}}</text>
+               </scroll-view>
+            </view>
+            <view class='right'>
+               <scroll-view scroll-y style="height: 445rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+            
+                  <text wx:for="{{secondArray}}" data-id="{{index}}" bindtap='changeCate' class="{{index==aid ? 'action':'' }}" data-cid="{{item.catid}}" wx:key="dd" >{{item.catname}}</text>
+               </scroll-view>
+            </view>
+         </view>
 
-  <view class="show" wx-if="{{activeId==2}}">
-    <view class='left'>
-      <scroll-view scroll-y style="height: 360rpx;"                bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-top="{{scrollTop}}">
-        <text wx:for="{{provence}}" data-id="{{index+1}}" bindtap='getCity' class="{{index==aid ? 'action':''}}" wx:key="dd" >{{item.areaname}}</text>
-      </scroll-view>
-    </view>
-    <view class='right'>
-      <scroll-view scroll-y style="height: 360rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
-        <text wx:for="{{city}}" wx:key="dd"  bindtap='changArea'>{{item.areaname}}</text>
-      </scroll-view>
-    </view>
-  </view>
+         <view class="show" wx-if="{{activeId==2}}" >
+            <view class='left'>
+               <scroll-view scroll-y style="height: 450rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-top="{{scrollTop}}">
+   <text bindtap='countryAll' class="{{-1==cid ? 'action':''}}">全国</text>
+                  <text wx:for="{{provence}}" data-id="{{index}}" bindtap='getCity' class="{{index==cid ? 'action':''}}" wx:key="dd">{{item.areaname}}</text>
+               </scroll-view>
+            </view>
+            <view class='right'>
+               <scroll-view scroll-y style="height: 450rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}"> 
+                  <text wx:for="{{city}}" wx:key="dd" bindtap='selectCity' data-areaid="{{item.areaid}}" data-id='{{index}}' data-arrchildid="{{item.arrchildid}}">{{item.areaname}}</text>
+               </scroll-view>
+            </view>
+         </view>
 
+          <view class='order' wx-if="{{activeId==3}}">
+               <text bindtap='selectOrder'>最新发布</text>
+               <text bindtap='selectOrder'> 列表视图</text>
+               <text bindtap='selectOrder'>人气优先</text>
+          </view>
+          <view class='btn' wx-if="{{show}}" bindtap='hidden'></view>
+      </view>
 
-<view class='order' wx-if="{{activeId==3}}" >
-<text bindtap='orderContent'>最新发布</text>
-<text  bindtap='orderContent'> 列表视图</text>
-<text  bindtap='orderContent'>人气优先</text>
-</view>
-<view class='btn' wx-if="{{show}}" catchtap='hiddden' style="height: 1000rpx;"></view>
-</view>
+   </view>
 </template>

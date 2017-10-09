@@ -1,11 +1,6 @@
 <!-- 站内信件 -->
 
   <view class="box">
-    <view class='top'>
-      <text bindtap='back'>返回</text>
-      <text>站内信件</text>
-      <text bindtap='show_shadow'>+发送</text>
-    </view>
     <view class='content'>
       <view class='demo' bindtap='detail'>
       <view class='theme'>欢迎加入中国锻件网</view>

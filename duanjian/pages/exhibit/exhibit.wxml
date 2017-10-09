@@ -1,0 +1,42 @@
+<import src="../template/template.wxml" />
+   <template is="head" data="{{...item}}"/>
+<!--查找数据  -->
+<view class='sea'>
+  <view class='search'>
+    <view class='img' bindtap='search' >
+      <image src='../../images/1.png' ></image>
+    </view>
+    <input type='text' bindinput='keyword' placeholder='请输入搜索的内容' class='{{keyword?"quxiao":""}}' value="{{keyword}}"></input>
+    <text wx-if="{{keyword}}" class='delete' bindtap='quxiao'>取消</text>
+  </view>
+</view>
+<!--详细数据  -->
+<view class="none" wx-if="{{zixun.length==0}}">该类暂时没有讯息</view>
+<view class='contentt'>
+  <view class='xianxi' wx:for="{{zixun}}" wx:key="dd" data-id='{{item.itemid}}'>
+    <view class='left'>
+      <image src='../../images/01.jpg'></image>
+    </view>
+    <view class='right'>
+      <view class='name'>{{item.title}}</view>
+       <view class='keyword'>{{item.company}} 
+       </view>
+       <view class='time-add'>
+       <text class='time'>{{item.edittime}}</text>
+       <text class='address'>{{item.areaname}}</text>
+       </view>
+    </view>
+  </view>
+
+
+  <view class='template'>
+    <view class='page' wx-if="{{zixun.length!=0}}">
+      <text>{{current_page}}/{{last_page}}</text>
+      <text  bindtap="prevPage">上一页</text>
+      <text bindtap="nextPage">下一页</text>
+      <text bindtap='firstPage'>首页</text>
+      <text bindtap='lastPage'>尾页</text>
+    </view>
+    <template is="item" />
+  </view>
+</view>

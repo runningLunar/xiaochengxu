@@ -7,10 +7,10 @@ class Login extends \think\Controller
     {
     	$psd=md5(input('password'));
     	$key=input('key');
-    	$user=db("member")
+        $user=db("member")
         ->field("username")
-        ->where("username='$key' or mobile='$key' or email='$key'  and password ='$psd' ")
-        ->find();
+        ->where("(username='$key' or mobile='$key' or email='$key')  and password ='$psd'")
+        ->find(); 
         if($user){
         	 return "1";
         }else{

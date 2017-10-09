@@ -1,4 +1,5 @@
 var data = require("../../utils/util.js");
+const app = getApp();
 var interval = null
 Page({
    data: {
@@ -86,8 +87,8 @@ Page({
             duration: 1500
          })
       } else {
+         var that = this;
          data.getLoginData(function (data) {
-            console.log(data);
                if(data==2){
                   wx.showToast({
                      title:'密码或帐号错误',
@@ -95,6 +96,7 @@ Page({
                      duration: 1500
                   })
                }else{
+                  app.globalData.keyword = that.data.userName;
                   wx.navigateTo({
                      url: '../member_01/index',
                   })
@@ -120,8 +122,10 @@ Page({
          })
       }else{
          if (this.data.code==this.data.yzcode){
+            var that=this;
             data.loginPhone(function(data){
                if(data==1){
+                  app.globalData.keyword = that.data.userPhone;
                   wx.navigateTo({
                      url: '../member_01/index',
                   })

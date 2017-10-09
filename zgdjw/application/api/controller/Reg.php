@@ -16,7 +16,7 @@ class Reg extends \think\Controller{
     public function getCode(){
         $code=input("code");
         $phone=input("userPhone");
-        $this->sendMessage($code,$phone);
+        // $this->sendMessage($code,$phone);
     }
     public function sendMessage($code,$phone){
         //  此处需要替换成自己的AK信息
@@ -59,8 +59,9 @@ class Reg extends \think\Controller{
         if($user){
           return "2";
       }else{
+    
           db("member")->insert(['mobile'=>input("userPhone"),
-           'password'=>md5(input("pwd")),
+           'password'=>md5(input("password")),
            'username'=> input("username"),
            'passport'=>input("username"),
            'email'=>"1090018789@qq.com"

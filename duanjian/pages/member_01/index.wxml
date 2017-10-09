@@ -3,19 +3,23 @@
 
   <view class="home {{showSide?'hide':'show'}}">
     <view class="sec01">
+      <view class='top'>
+        <text bindtap='move'>快捷操作</text>
+        <text>会员中心</text>
+      </view>
       <view class='per_info'>
         <view class='per_photo'>
           <image src='../../images/default.jpg'></image>
         </view>
         <view class='name'>
-          <text>卢家敏</text>
-          <text>（Jimmy）</text>
+          <text>{{member.username}}</text>
+          <text>（{{member.username}}）</text>
         </view>  
       </view>
     </view>
     <view class='sec02'>
       <view class='capital'>
-        <view class='num color01'>0.00元</view>
+        <view class='num color01'>{{member.money}}元</view>
         <view class='type'>我的资金</view>
       </view>
       

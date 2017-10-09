@@ -1,8 +1,4 @@
-<!-- 信息管理 -->
-<view class="top">
-  <text class='back' bindtap='back'>返回</text>
-  <text>信息管理</text>
-</view>
+
 
 <view class='list'>
 

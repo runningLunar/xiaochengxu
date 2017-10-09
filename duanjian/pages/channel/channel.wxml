@@ -1,27 +1,20 @@
-<view class="container1">
-  <view class='nav'>
-    <view class='rtn'>返回</view>
-    <view class='pd'>频道</view>
-    <view class='nav-menu'>
-      <image src='../../images/cd.png' bindtap='openList'></image>
-    </view>
-  </view>
-  <view class='nav-menu-content'  hidden='{{state}}' bindtap='closeList'>
-  </view>
 
-<view class='nav-menu-list' hidden='{{state}}'>
-  <view class='nav-menu-item'>
-    <image src='../../images/ss.png'></image>我要搜索</view>
-  <view class='nav-menu-item'>
-    <image src='../../images/flll.png'></image>按分类浏览</view>
-  <view class='nav-menu-item'>
-    <image src='../../images/dq.png'></image>按地区浏览</view>
-  <view class='nav-menu-item'>
-    <image src='../../images/lb.png'></image>全部列表</view>
+<import src="../template/template.wxml" />
+<view class='sea'>
+  <view class='search'>
+    <view class='img' bindtap='search' >
+      <image src='../../images/1.png' ></image>
+    </view>
+    <input type='text' bindtap='redict' placeholder='请输入搜索的内容' class='{{keyword?"quxiao":""}}' value="{{keyword}}"></input>
+</view>
 </view>
 <view class="channel_list">
-  <view bandtap="openChannelDetailed" class="channel_list_item" wx:for="{{channelList}}" wx:key="cl">
+  <view bindtap="openChannelDetailed" class="channel_list_item" wx:for="{{channelList}}" 
+  data-id="{{index}}" wx:key="cl">
     <text class="tli">{{item}}</text>
+    <text class='icon'>></text>
   </view>
 </view>
+<view class='foot'>
+<template is="item" />
 </view>

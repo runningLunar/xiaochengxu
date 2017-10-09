@@ -1,4 +1,5 @@
 var data = require("../../utils/util.js");
+const app = getApp();
 Page({
    data: {
       userName: '',
@@ -95,6 +96,7 @@ Page({
          })
       }else{
          if (this.data.code == this.data.yzcode){
+            var that=this;
             data.regester(function(data){
                if(data==2){
                   wx.showToast({
@@ -103,12 +105,12 @@ Page({
                      duration: 1500
                   }) 
                }else{
+                  app.globalData.keyword = that.data.userPhone;
                   wx.navigateTo({
                      url: '../member_01/index',
                   })
                }
             }, this.data.userName, this.data.pwd, this.data.userPhone)
-            console.log(this.data.userPhone);
          }else{
             wx.showToast({
                title: '验证码错误',
@@ -118,6 +120,7 @@ Page({
          }
       }
    },
+   //拖动验证码
    tap: function (ev) {
       var x = ev.touches[0].clientX - ev.target.offsetLeft;//移动框原点位 
 
@@ -142,6 +145,7 @@ Page({
          })
       }
    },
+   //拖动结束
    touchEnd: function (ev) {
       var that = this;
       // //bar的宽度

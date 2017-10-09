@@ -1,10 +1,20 @@
 //index.js
 //获取应用实例
-const app = getApp()
-
+const app = getApp();
+var data = require("../../utils/util.js");
 Page({
   data: {
     showSide:true
+   }, 
+  onLoad: function (options) {
+     var keyword=app.globalData.keyword;
+     //获取登录和注册用户的数据
+     var that=this;
+      data.getMember(function(data){
+         that.setData({
+            member:data
+         })
+      }, keyword)
   },
   move:function(){
     let showSide = this.data.showSide;
