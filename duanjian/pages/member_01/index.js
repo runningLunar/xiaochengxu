@@ -14,6 +14,7 @@ Page({
          that.setData({
             member:data
          })
+         app.globalData.member=data;
       }, keyword)
   },
   move:function(){
@@ -58,6 +59,7 @@ Page({
     })
   },
   loginOut:function(){
+     app.globalData.member='';
     wx.navigateTo({
       url: 'login_01/login',
     })

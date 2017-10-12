@@ -320,7 +320,6 @@ getProvence:function(){
        for(var i=0;i<data.data.length;i++){
           arr.push({ title: data.data[i].title, areaname: data.data[i].areaname, company: data.data[i].company, edittime: new Date(data.data[i].edittime * 1000).toLocaleString().replace(/:\d{1,2}$/, ' ')})
        }
-       console.log(arr);
         that.setData({
            zixun: arr,
           last_page:data.last_page
@@ -407,6 +406,14 @@ getProvence:function(){
   quxiao:function(){
      this.setData({
         keyword:''
+     })
+  },
+
+  nvaicat_details: function (ev) {
+     var index = ev.currentTarget.dataset.index;
+     app.globalData.content_data = this.data.zixun[index];
+     wx.navigateTo({
+        url: '',
      })
   }
 })

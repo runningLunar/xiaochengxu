@@ -1,110 +1,150 @@
-
-.container .nav{
+@import "../wxParse/wxParse.wxss";
+page{
+   overflow: hidden;
+   width: 100%;
+}
+.container1 {
+  justify-content: space-between;
+  box-sizing: border-box;
+  color: #000000;
+   overflow: hidden;
+   width: 100%;
+} 
+.container1 .nav{
   width: 100%;
-  background: #f6f6f6;
-  padding: 0.5rem;
-  border-bottom: 1px solid #ccc;
+  padding: 20rpx;
+  border-bottom: 2rpx solid #ccc;
 }
-.container .nav text{
-  font-size: 1rem;
+.container1 .nav text{
+  font-size: 36rpx;
 }
-.container .Carousel .title{
- padding: 1rem 0.5rem;
+.container1 .Carousel .title{
+ padding: 36rpx 20rpx;
 
 }
-.container .Carousel .date{
-  font-size: 0.8rem;
+.container1 .Carousel .date{
+  font-size: 28rpx;
   color: #999999;
-  padding-left: 0.5rem;
- 
+  padding-left: 20rpx;
 }
-.container .Carousel swiper{
-  margin: 0.5rem auto;
+.container1 .Carousel .date image{
+  width: 30rpx;
+  height: 30rpx;
+  margin: 10rpx 5rpx 0 0;
 }
-.container .price{
-  border: 1px solid #ccc;
-  height: 85px;
+.container1 .Carousel swiper{
+  margin: 20rpx auto;
+}
+.container1 .price{
+  border: 2rpx solid #ccc;
+  height: 170rpx;
   border-left: none;
   border-right: none;
 }
-.container .price .t{
-  margin-left: 0.5rem;
-  height: 30px;
-  padding-top: 13px;
+.container1 .price .t{
+  margin-left: 20rpx;
+  height: 60rpx;
+  padding-top: 20rpx;
+  vertical-align: center;
 }
-.container .price .t:nth-child(1){
-  border-bottom: 1px solid #ccc;
+.container1 .price .t:nth-child(1){
+  border-bottom: 2rpx solid #ccc;
 }
-.container .btn{
+.container1 .btn{
   background: #03a9f4;
-  margin: 0.5rem;
+  margin: 20rpx;
 }
-.container .gy{
-  border-top: 1px solid #ccc;
-  margin-bottom: 1rem;
+.container1 .gy{
+  border-top: 2rpx solid #ccc;
+  margin-bottom: 40rpx;
 }
-.container .gy .gyxx{
+.container1 .gy .gyxx{
   display: flex;
   width: 100%;
-  height: 80px;
-  padding-left: 0.5rem;
+  height: 160rpx;
   
 }
-.container .gy .gyxx .gy-l{
+.container1 .gy .gyxx .gy-l{
   flex: 1;
   align-self: center;
 }
-.container .gy .gyxx .gy-c{
+.container1 .gy .gyxx .gy-l image{
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 20rpx;
+}
+.container1 .gy .gyxx .gy-c{
   flex: 5;
    align-self: center;
 }
-.container .gy .gyxx .gy-r{
+.container1 .gy .gyxx .gy-r{
   flex: 1;
   align-self: center;
+  color: #ccc;
 }
-.container .gy .btn-t{
-  padding: 0 1.2rem;
+.container1 .lian{
+   width: 100%;
+   overflow: hidden;
+   word-wrap: break-word; 
+}
+.container1 .gy .btn-t{
+  padding: 0 48rpx;
   display: flex;
   justify-content: space-between;
 }
-.container .gy .btn2{
+.container1 .gy .btn2{
 width: 35%;
 vertical-align: center;
-height: 1.3rem;
-border-radius: 6px;
-border: 1px solid #03a9f4;
-padding: 0.3rem 1rem 0.3rem 1rem;
+height: 52rpx;
+border-radius: 12rpx;
+border: 2rpx solid #03a9f4;
+padding: 12rpx 40rpx 12rpx 40rpx;
 color: #03a9f4;
 text-align: center;
-font-size: 0.9rem;
+font-size: 32rpx;
 }
-.container .js{
-   padding: 0.5rem;
+.container1 .js{
+   padding: 20rpx;
    text-align: center;
 }
-.container .js .present{
-  font-size: 0.9rem;
+.container1 .js .present{
+  font-size: 32rpx;
   color: #003399;
-  line-height: 30px;
+  line-height: 60rpx;
+  text-align: justify;
+   width: 90%;
+  margin: 0 auto; 
 }
-.container .lxfs{
+.container1 .lxfs{
   width: 100%;
-  height: 25px;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
+  height: 100rpx;
+  border: 2rpx solid #ccc;
   border-left: none;
   border-right: none;
-  margin: 0.5rem auto;
+  margin: 20rpx auto;
+  line-height: 100rpx;
 }
-.container .jtlxfs{
-   width: 100%;
-  height: 25px;
-  padding: 0.5rem;
-  font-size: 0.9rem;
+.container1 .lxfs text{
+     position: relative;
+  left: 20rpx;
+  border-left:solid 20rpx #03a9f4; 
+  padding-left:20rpx; 
 }
-.container .nav-bottom{
+.wxParse-p{
+   text-indent: 50rpx;
+   color: #757575;
+}
+.container1 .jtlxfs{
+   width: 95%;
+  height: 50rpx;
+  font-size: 32rpx;
+  word-wrap: break-word; 
+  display: inline-block;
+   padding-left:20rpx; 
+}
+.container1 .nav-bottom{
   width: 100%;
-  height: 2.8rem;
+  height: 112rpx;
   display: flex;
   text-align: center;
   position: fixed;
@@ -112,87 +152,61 @@ font-size: 0.9rem;
   bottom: 0;
   background: #fff;
 }
-.container .nav-bottom .sc{
-  padding: 0.3rem 0.9rem 0rem 0.9rem;
-  font-size: 0.7rem;
+.container1 .nav-bottom .sc{
+  padding: 12rpx 36rpx 0 36rpx;
+  font-size: 28rpx;
   flex: 1;
-  border: 1px solid #ccc;
+  border: 2rpx solid #ccc;
   border-left: none;
   border-bottom: none;
 }
-.container .nav-bottom .xj{
-  flex: 1;
-   padding: 0.3rem 0.9rem 0rem 0.9rem;
-  font-size: 0.7rem;
-   border: 1px solid #ccc;
-  border-left: none;
-  border-bottom: none;
-}
-.container .nav-bottom .ljlx{
-  flex: 1;
-    padding: 0.3rem 0.9rem 0rem 0.9rem;
-  font-size: 0.6rem;
-   border: 1px solid #ccc;
-  border-left: none;
-  border-bottom: none;
-}
-.container .nav-bottom .zxjt{
+.container1 .nav-bottom .zxjt{
   flex: 2;
-   padding: 0.7rem 1rem 0 1rem;
+   padding: 28rpx 40rpx 0 40rpx;
    background: #03a9f4;
    color: #fff;
 }
-.container .nav-bottom image{
-  margin-left: 0.7rem;
+.container1 .nav-bottom image{
+  margin-left: 28rpx;
   display:block;
-  width:1.2rem;
-  height:1.2rem;
+  width:48rpx;
+  height:48rpx;
   color: #03a9f4;
 }
-.container .share{
-  width: 100%;
-  border: 1rem solid #f6f6f6;
-  border-left: none;
-  border-right: none; 
-  font-size: 0.7rem;
+
+.container1 .bottom-list{
+  margin-bottom: 100rpx;
 }
-.container .share .share-t{
-  padding-top: 1rem;
-}
-.container .share .share-t image{
-  width: 0.8rem;
-  height: 0.8rem;
-  margin-left: 0.5rem;
-}
-.container .share .share-t text{
-  float: right;
-  margin-right: 0.5rem;
-}
-.container .share .share-c{
-  padding: 1rem 0.5rem;
-}
-.container .share .share-c image{
-width: 2rem;
-height: 2rem;
-margin-left: 0.5rem;
-margin-bottom: -0.6rem;
-}
-.container .bottom-list{
-  margin-bottom: 50px;
-}
-.container .bottom-list .bl-t{
-  padding: 0.8rem 0.5rem;
+.container1 .bottom-list .bl-t{
+  padding: 32rpx 20rpx;
   color: #f30701;
-  font-size: 0.9rem;
+  font-size: 32rpx;
 }
-.container .bottom-list .bl-t{
-  padding: 0.8rem 0.5rem;
-  color: #f30701;
-  font-size: 0.9rem;
+.container1 .bottom-list .bl-c{
+  font-size: 28rpx;
+  padding: 20rpx;
+  border-top: 2rpx solid #ccc;
 }
-.container .bottom-list .bl-c{
-  font-size: 0.8rem;
-  padding: 0.5rem;
-  border-top: 1px solid #ccc;
+
+/* 返回顶部 */
+
+.return {
+  position: fixed;
+  right: 22rpx;
+  bottom: 120rpx;
+  z-index: 9999;
+  width: 90rpx;
+  height: 90rpx;
+  background-color: #fff;
+  border: 1rpx solid #d2d2d2;
+  border-radius: 100%;
+  overflow: hidden;
+  opacity: 0.8;
+}
+
+.returnTop {
+  width: 60rpx;
+  height: 60rpx;
+  margin: 15rpx;
 }
 

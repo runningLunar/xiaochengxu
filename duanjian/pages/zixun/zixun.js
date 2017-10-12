@@ -120,7 +120,6 @@ Page({
    },
    //改变分类 
    changeCate:function(ev){
-      console.log(ev.currentTarget.dataset.id);
       this.setItem(
          this.data.item.secondArray[ev.currentTarget.dataset.id].catname
          , this.data.item.areaTitle
@@ -356,7 +355,6 @@ getProvence:function(){
 
   nextPage: function () {
     var page = this.data.current_page;
-    console.log(page);
     if (page == this.data.last_page) {
       page = this.data.last_page
     }else{
@@ -403,6 +401,14 @@ getProvence:function(){
   quxiao:function(){
      this.setData({
         keyword:''
+     })
+  },
+
+  nvaicat_details:function(ev){
+     var index = ev.currentTarget.dataset.index;
+     app.globalData.content_data =this.data.zixun[index];
+     wx.navigateTo({
+        url: '../goodsdetail/goodsdetail',
      })
   }
 })

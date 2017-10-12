@@ -29,7 +29,9 @@ class Know extends \think\Controller
            $zixun_list=db("know")
                 ->alias("a")
          ->where($where_sql)
+          ->field("a.areaid,a.catid,a.itemid,a.title,c.areaname,d.content")
          ->join("area c","c.areaid = a.areaid")
+        ->join("know_data d","d.itemid=a.itemid")
         ->order("itemid desc")
         ->paginate(10);
         // 分页

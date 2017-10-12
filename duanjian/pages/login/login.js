@@ -15,7 +15,7 @@ Page({
       code: '',
       send: "发送",
       lock: 'disable',
-      click:true
+      click: true
    },
    onLoad: function () {
 
@@ -47,19 +47,19 @@ Page({
          color: "#03a9f4",
       })
    },
-    //获取输入的用户名
+   //获取输入的用户名
    userNameInput: function (e) {
       this.setData({
          userName: e.detail.value
       })
    },
-    //获取输入的手机号
+   //获取输入的手机号
    userPhoneInput: function (e) {
       this.setData({
          userPhone: e.detail.value
       })
    },
-    //获取输入的密码
+   //获取输入的密码
    userPwdInput: function (e) {
       this.setData({
          userPwd: e.detail.value
@@ -89,18 +89,24 @@ Page({
       } else {
          var that = this;
          data.getLoginData(function (data) {
-               if(data==2){
-                  wx.showToast({
-                     title:'密码或帐号错误',
-                     image: "../../images/fail.png",
-                     duration: 1500
+            if (data == 2) {
+               wx.showToast({
+                  title: '密码或帐号错误',
+                  image: "../../images/fail.png",
+                  duration: 1500
+               })
+            } else {
+               app.globalData.keyword = that.data.userName;
+               if (app.globalData.content_data) {
+                  wx.navigateTo({
+                     url: '../goodsdetail/goodsdetail',
                   })
-               }else{
-                  app.globalData.keyword = that.data.userName;
+               } else {
                   wx.navigateTo({
                      url: '../member_01/index',
                   })
                }
+            }
          }, this.data.userPwd, this.data.userName)
       }
    },
@@ -120,28 +126,28 @@ Page({
             image: "../../images/fail.png",
             duration: 1500
          })
-      }else{
-         if (this.data.code==this.data.yzcode){
-            var that=this;
-            data.loginPhone(function(data){
-               if(data==1){
+      } else {
+         if (this.data.code == this.data.yzcode) {
+            var that = this;
+            data.loginPhone(function (data) {
+               if (data == 1) {
                   app.globalData.keyword = that.data.userPhone;
                   wx.navigateTo({
                      url: '../member_01/index',
                   })
                }
             }, this.data.userPhone)
-         }else{
+         } else {
             wx.showToast({
                title: '验证码错误',
                image: "../../images/fail.png",
                duration: 1500
-            }) 
+            })
          }
       }
 
    },
-//发送验证码
+   //发送验证码
    onSendmedds: function () {
       if (this.data.click == true) {
          if (this.data.userPhone == '') {
@@ -163,7 +169,7 @@ Page({
             var timer = setInterval(function () {
                time--;
                that.setData({
-                  send : time + 's后可以重新发送',
+                  send: time + 's后可以重新发送',
                   click: false
                });
                if (time == 0) {
@@ -182,8 +188,9 @@ Page({
             data.getCode(function (data) {
             }, this.data.yzcode, this.data.userPhone)
          }
-      }},
-      //去注册页面
+      }
+   },
+   //去注册页面
    doReg: function () {
       wx.navigateTo({
          url: '../register/register'

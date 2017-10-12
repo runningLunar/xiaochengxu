@@ -1,0 +1,61 @@
+<import src="../wxParse/wxParse.wxml" />
+<scroll-view scroll-y="true" scroll-top="{{scrollTop}}" scroll-with-animation="true" bindscroll="scroll" style="position: absolute; left: 0; top:0; bottom: 0; right: 0;">
+<view class='nav'>
+  <text> 首页 > {{ catname.catname}} > {{gddata.catname}}</text>
+</view>
+<view class='top'>
+  <text class='t-titie'>{{gddata.title}}</text>
+  <view class='t-date'>
+    <image src='../../images/etime.png'></image> {{etime}}</view>
+</view>
+<view class='detail'>
+  <view class='d-item'>
+    <text>日期:</text>{{fromtime}}~{{totime}}</view>
+  <view class='d-item'>
+    <text>城市:</text>{{gddata.city}}</view>
+  <view class='d-item'>
+    <text>地址:</text>{{gddata.address}}</view>
+  <view class='d-item'>
+    <text>展馆:</text>{{gddata.address}}</view>
+  <view class='d-item'>
+    <text>主办:</text>{{gddata.sponsor}}</view>
+</view>
+
+
+<view class='contact'>
+  <view class='c-title'>联系方式</view>
+  <view class='detail'>
+    <view class='d-item'>
+      <text>姓名:</text>{{gddata.truename}}</view>
+    <view class='d-item'>
+      <text>电话:</text>{{gddata.telephone}}</view>
+    <view class='d-item'>
+      <text>手机:</text>{{gddata.mobile}}</view>
+    <view class='d-item'>
+      <text>传真:</text>{{gddata.fax}}</view>
+    <view class='d-item'>
+      <text>邮件:</text>{{gddata.email}}</view>
+    <view class='d-item'>
+      <text>QQ:</text>{{gddata.qq}}</view>
+    <view class='d-item'>
+      <text>地址:</text>{{gddata.addr}}</view>
+  </view>
+</view>
+
+<view class='content'>
+   <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+</view>
+
+<view class='more'>
+如遇无效、虚假、诈骗信息，请立即举报
+<view class='m-btn'>有新的<text>锻件展会</text>信息发布了，快去看看</view>
+</view>
+
+<view class='bottom-list'>
+    <view class='bl-t'>同类锻件展会 </view>
+    <view class='bl-c' wx:for="{{category}}" bindtap='navict_detail' data-id='{{index}}'>{{item.title}} </view>
+  </view>
+  <view class="return" bindtap="goTop" hidden="{{floorstatus}}">
+    <image class='returnTop' src='../../images/returnTop.png'></image>
+  </view>
+  </scroll-view>

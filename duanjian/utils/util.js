@@ -3,7 +3,6 @@ function getProvence(callback,parentid){
     url:"http://localhost/zdj/xiaochengxu/zgdjw/public/api/area/get",
     header: {
       'content-type': 'application/json',
-       "Authorization": 'APPCODE 0f42d91c4d884fe9a4b7e90f14412456'
     },
     data:{
         parentid:parentid
@@ -21,13 +20,54 @@ function getCity(callback,arrchildid){
       url: "http://localhost/zdj/xiaochengxu/zgdjw/public/api/area/getCity",
       header: {
          'content-type': 'application/json',
-         "Authorization": 'APPCODE 0f42d91c4d884fe9a4b7e90f14412456'
       },
       data: {
          arrchildid: arrchildid
       },
       success: function (res) {
          if (res.statusCode == 200) {  //成功了
+            callback(res.data);
+         }
+      }
+   })
+}
+
+//获取新闻详情
+function newsDetail(newsid, callback) {
+
+   wx.request({
+      url: "http://localhost/zdj/xiaochengxu/zgdjw/public/api/newsDetail/get",
+      data: {
+         newsid: newsid
+      },
+      method: "get",
+      header: {
+         "content-type": "json"
+      },
+      success: function (res) {
+         if (res.statusCode == "200") {
+            // console.log(res.data);
+            callback(res.data);
+         }
+      }
+   })
+}
+
+// 获取同类更多资讯
+function moreNews(catid, callback) {
+
+   wx.request({
+      url: "http://localhost/zdj/xiaochengxu/zgdjw/public/api/newsDetail/getOther",
+      data: {
+         catid: catid
+      },
+      method: "get",
+      header: {
+         "content-type": "json"
+      },
+      success: function (res) {
+         if (res.statusCode == "200") {
+            console.log(res.data);
             callback(res.data);
          }
       }
@@ -53,6 +93,28 @@ function getZixun(callback, page, catid, arrchildid, keyword) {
     }
   })
 }
+
+
+//获取同类更多供应商
+function moreGongyin(callback,catid) {
+
+   wx.request({
+      url: "http://localhost/zdj/xiaochengxu/zgdjw/public/api/gongyin/getOther",
+      data: {
+         catid: catid
+      },
+      method: "get",
+      header: {
+         "content-type": "json"
+      },
+      success: function (res) {
+         if (res.statusCode == "200") {
+            callback(res.data);
+         }
+      }
+   })
+}
+
 //获取供应商
 function getSell(callback, page, catid, arrchildid, keyword) {
    wx.request({
@@ -160,7 +222,7 @@ function getKnow(callback, page, catid, arrchildid, keyword) {
 //获取锻件圈
 function getClub(callback, page, catid, arrchildid, keyword) {
    wx.request({
-      url: "http://localhost/zdj/xiaochengxu/zgdjw/public/api/exhibit/get",
+      url: "http://localhost/zdj/xiaochengxu/zgdjw/public/api/club/get",
       header: {
          'content-type': 'application/json',
       },
@@ -316,6 +378,62 @@ function getMember(callback, keyword) {
       }
    })
 }
+
+//详情中获取类型
+function getCategory(callback,catid){
+   wx.request({
+      url: "http://localhost/zdj/xiaochengxu/zgdjw/public/api/category/getCategory",
+      data: {
+         catid: catid
+      },
+      method: "get",
+      header: {
+         "content-type": "json"
+      },
+      success: function (res) {
+         if (res.statusCode == "200") {
+            callback(res.data);
+         }
+      }
+   })
+}
+//获取采购详情中的其他同类
+function moreBuy(callback, catid) {
+
+   wx.request({
+      url: "http://localhost/zdj/xiaochengxu/zgdjw/public/api/buy/getOther",
+      data: {
+         catid: catid
+      },
+      method: "get",
+      header: {
+         "content-type": "json"
+      },
+      success: function (res) {
+         if (res.statusCode == "200") {
+            callback(res.data);
+         }
+      }
+   })
+}
+function moreExhibit(callback, catid) {
+
+   wx.request({
+      url: "http://localhost/zdj/xiaochengxu/zgdjw/public/api/exhibit/getOther",
+      data: {
+         catid: catid
+      },
+      method: "get",
+      header: {
+         "content-type": "json"
+      },
+      success: function (res) {
+         if (res.statusCode == "200") {
+            callback(res.data);
+         }
+      }
+   })
+}
 module.exports = {
   getProvence: getProvence,
   getCity: getCity,
@@ -332,5 +450,11 @@ module.exports = {
   getExhibit: getExhibit,
   getClub: getClub,
   getKnow: getKnow,
-  getMember: getMember
+  getMember: getMember,
+  newsDetail: newsDetail,
+  moreNews: moreNews,
+  moreGongyin: moreGongyin,
+  getCategory: getCategory,
+  moreBuy: moreBuy,
+  moreExhibit: moreExhibit
 }

@@ -2,19 +2,7 @@
 page{
    height: auto;
 }
-.login {
-   display: flex;
-   margin-top: 20rpx;
-}
 
-.login text {
-   font-size: 28rpx;
-   display: block;
-   width: 25%;
-   text-align: center;
-   color: #666;
-   margin-bottom: 10rpx;
-}
 
 .foot {
    font-size: 28rpx;
@@ -22,40 +10,30 @@ page{
    display: block;
    margin-top: 20rpx;
    color: #666;
-   padding-bottom: 100rpx;
+   padding-bottom: 50rpx;
 }
 
-.share {
-   display: flex;
-   border-bottom: 1rpx solid grey;
-   overflow: hidden;
-   padding-top: 50rpx;
-}
-
-.share .content {
-   flex: auto;
-   overflow: hidden;
+.image{
    text-align: center;
-   padding-bottom: 20rpx;
+   border-bottom:1rpx solid grey;
 }
-
-.share .content image {
-   width: 40rpx;
-   height: 45rpx;
+.title{
+   padding-top:50rpx; 
 }
-
-.share .content text {
+.title text{
    display: block;
-   font-size: 28rpx;
-   color: #666;
+   margin-top:20rpx; 
 }
-
-.template {
+.image image{
+   width: 135rpx;
+   height: 150rpx;
+   margin: 50rpx;
+}
+.template{
    background: #f5f5f5;
+   padding-top: 20rpx;
 }
-
 /*导航栏  */
-
 .nav-menu {
    border-bottom: 1rpx solid #e6e6e6;
    width: 100%;
@@ -144,6 +122,6 @@ page{
 }
 .btn{
    width: 100%;
-   height:500rpx;
+   height:1000rpx;
    float: left;
 }

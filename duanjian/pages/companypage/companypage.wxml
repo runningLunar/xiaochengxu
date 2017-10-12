@@ -1,0 +1,37 @@
+<import src="../template/template.wxml" />
+<import src="../wxParse/wxParse.wxml" />
+<view class="top">
+  <view class='t-title'>
+    <view class='logo'></view>
+    <view class='company'>
+      <text>{{data.company}}</text>
+      <span>普通会员</span>
+    </view>
+  </view>
+</view>
+<view class='content'>
+  <view class='c-list'>
+    </view>
+  <view class='c-list'>
+    <view class='c-title'>
+      <text>关于我们</text>
+      <span>ABOUT COMPANY</span>
+    </view>
+    <view class='c-con1'>
+      <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+    </view>
+  </view>
+
+ <view class='lianxi'>
+   <view class='li'> 
+      <text class='title'>联系方式</text>
+   </view>
+     <view class='li'>公司名称：{{data.company}}</view>
+       <view class='li'>公司地址：{{data.address}}</view>
+         <view class='li'>公司电话：{{data.telephone}}</view>
+            <view class='li'>公司联系人：{{data.username}}</view>
+ </view>
+<view class='foot'>
+<template is="item" />
+</view>
+</view>

@@ -318,11 +318,11 @@ getProvence:function(){
     data.getSell(function(data){
        var arr=[];
        for(var i=0;i<data.data.length;i++){
-          arr.push({ title: data.data[i].title, areaname: data.data[i].areaname, company: data.data[i].company, edittime: new Date(data.data[i].edittime * 1000).toLocaleString().replace(/:\d{1,2}$/, ' ')})
-       }
-       console.log(arr);
+          arr.push({ title: data.data[i].title, areaname: data.data[i].areaname, company: data.data[i].company, edittime: new Date(data.data[i].addtime * 1000).toLocaleString().replace(/:\d{1,2}$/, ' ')})
+       };
         that.setData({
            zixun: arr,
+           content:data.data,
           last_page:data.last_page
         })
     }, page, catid, areaid,keyword)
@@ -407,6 +407,14 @@ getProvence:function(){
   quxiao:function(){
      this.setData({
         keyword:''
+     })
+  },
+
+  nvaicat_details: function (ev) {
+     var index = ev.currentTarget.dataset.index;
+     app.globalData.content_data = this.data.content[index];
+     wx.navigateTo({
+        url: '../goodsdetail/goodsdetail',
      })
   }
 })

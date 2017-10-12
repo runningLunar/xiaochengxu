@@ -1,14 +1,12 @@
+<import src="../../../wxParse/wxParse.wxml"/> 
 <view class="box">
   <view class='content'>
      <view class='theme'>
-      <view class='title'>欢迎加入中国锻件网</view>
-      <view class='date'>2017-09-24 15:23</view>
-     </view>
-     <view class='logo'>
-      <image src='../../../../images/logo.png'></image>
+      <view class='title'>{{title}}</view>
+      <view class='date'>{{time}}</view>
      </view>
      <view>
-      <text class='message'>尊敬的会员:恭喜您成功注册成为中国锻件网会员！以下是详细信息</text>
+     <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
      </view>
   </view>
 

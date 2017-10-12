@@ -86,6 +86,9 @@ Page({
          if (typeof (this.data.secondArray[index]) == 'undefined') {
             var array = that.data.secondArray;
          data.getSecondCategory(function(data){
+            if(data.length==0){
+               data.push({ catname: "全部", catid: that.data.item.firstArray[index].arrchildid })
+            }
             array[index]=data;
             that.setData({
                secondArray: array 
@@ -102,7 +105,6 @@ Page({
                , that.data.item.tab2
                 , that.data.cid,
                that.data.id
-         
           ) }, arrayId) }else {
             that.setItem('全部分类'
                , '全部地区'
@@ -120,9 +122,14 @@ Page({
    },
    //改变分类 
    changeCate:function(ev){
-      console.log(ev.currentTarget.dataset.id);
+      var catetitle;
+      if (typeof (this.data.item.firstArray[this.data.id]) =='undefined'){
+         catetitle = this.data.item.secondArray[ev.currentTarget.dataset.id].catname
+      }else{
+         catetitle = this.data.item.firstArray[this.data.id].catname;
+      }
       this.setItem(
-         this.data.item.secondArray[ev.currentTarget.dataset.id].catname
+         catetitle
          , this.data.item.areaTitle
          , this.data.item.firstArray
          , this.data.secondArray[this.data.id]
@@ -318,11 +325,11 @@ getProvence:function(){
     data.getExhibit(function(data){
        var arr=[];
        for(var i=0;i<data.data.length;i++){
-          arr.push({ title: data.data[i].title, areaname: data.data[i].areaname, company: data.data[i].company, edittime: new Date(data.data[i].edittime * 1000).toLocaleString().replace(/:\d{1,2}$/, ' ')})
+          arr.push({ title: data.data[i].title, areaname: data.data[i].city, company: data.data[i].sponsor, catname: data.data[i].catname, edittime: new Date(data.data[i].addtime * 1000).toLocaleString().replace(/:\d{1,2}$/, ' ')})
        }
-       console.log(arr);
         that.setData({
            zixun: arr,
+           content: data.data,
           last_page:data.last_page
         })
     }, page, catid, areaid,keyword)
@@ -407,6 +414,14 @@ getProvence:function(){
   quxiao:function(){
      this.setData({
         keyword:''
+     })
+  },
+
+  nvaicat_details: function (ev) {
+     var index = ev.currentTarget.dataset.index;
+     app.globalData.content_data = this.data.content[index];
+     wx.navigateTo({
+        url: '../exhibidetail/exhibidetail',
      })
   }
 })

@@ -1,0 +1,58 @@
+<import src="../wxParse/wxParse.wxml" />
+<scroll-view scroll-y="true" scroll-top="{{scrollTop}}" scroll-with-animation="true" bindscroll="scroll" style="position: absolute; left: 0; top:0; bottom: 0; right: 0;">
+   <view class="container1">
+      <view class="nav">
+         <text>首页 > {{catname.catname}}>{{gddata.catname}}</text>
+      </view>
+      <view class='head'>
+         <view class='title'>{{gddata.title}}</view>
+         <view class='time'>
+            <image src='../../images/etime.png'></image>{{etime}}</view>
+      </view>
+
+      <view class="image">
+         <image src="../../images/1.jpg" style="width:100%"></image>
+      </view>
+      <view class='pinjia'>
+         <text>0人评价</text>
+      </view>
+      <view class='lianxi'>
+         <text class='li'>联系类型：{{gddata.tag}}</text>
+         <text class='li'>联系人：{{gddata.truename}}</text>
+         <text class='li'>联系区域：{{gddata.address}}</text>
+         <text class='li'>联系电话：{{gddata.mobile}}</text>
+         <view class='button'>
+            <button>电话联系</button>
+            <button>免费预约</button>
+         </view>
+      </view>
+      <view class="company">
+         <view class='left'>
+            <image src='../../images/default.jpg'></image>
+         </view>
+         <view class='right'>
+            <text class='com'>{{gddata.company}}</text>
+            <text class='address'>{{gddata.address}}</text>
+         </view>
+      </view>
+      <view class='content'>        <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+      </view>
+      <view class='bottom-list'>
+         <view class='bl-t'>同类锻件供应 </view>
+         <view class='bl-c' bindtap='navict_detail' wx:for="{{category}}" data-id="{{index}}">{{item.title}}</view>
+      </view>
+
+      <view class="nav-bottom">
+         <view class="sc">
+            <image src="../../images/xx.png"></image>收藏</view>
+         <view class="sc">
+            <image src="../../images/xj.png"></image>询价</view>
+         <view class="sc">
+            <image src="../../images/lx.png"></image>联系</view>
+         <view class="zxjt" bindtap='chat'>在线交谈</view>
+      </view>
+      <view class="return" bindtap="goTop" hidden="{{floorstatus}}">
+         <image class='returnTop' src='../../images/returnTop.png'></image>
+      </view>
+   </view>
+</scroll-view>

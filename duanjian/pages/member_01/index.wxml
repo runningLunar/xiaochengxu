@@ -121,7 +121,7 @@
   <view class='side-menu'>
     <view class='top02'>
       <image src="../../images/default.jpg" class='head-picture'></image>
-      <text class='name02'>卢家敏</text>
+      <text class='name02'>{{member.username}}</text>
     </view>
     <view>
       <view class='title'>快捷菜单</view>

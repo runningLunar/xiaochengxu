@@ -30,6 +30,7 @@ Page({
    */
   onLoad: function (options) {
   this.init();
+
   },
   //数据初始化
   init:function(){
@@ -315,7 +316,6 @@ getProvence:function(){
    getFactory: function (page, catid, areaid,keyword){
     var that=this;
     data.getFactory(function(data){
-       console.log(data.data);
         that.setData({
            zixun: data.data,
           last_page:data.last_page
@@ -402,6 +402,14 @@ getProvence:function(){
   quxiao:function(){
      this.setData({
         keyword:''
+     })
+  },
+
+  nvaicat_details: function (ev) {
+     var index = ev.currentTarget.dataset.index;
+     app.globalData.content_data = this.data.zixun[index];
+     wx.navigateTo({
+        url: '../companypage/companypage',
      })
   }
 })

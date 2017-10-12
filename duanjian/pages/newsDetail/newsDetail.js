@@ -1,91 +1,86 @@
 // newsDetail.js
+var util = require('../../utils/util.js');
 var WxParse = require('../wxParse/wxParse.js');
-
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    newsid: 1,
+    catid: 3,
     toTopStatus: false,
     title:'T9材质_T9化学成分和机械性能',
-    sourse:'中国锻造网',
-    time:'2017-9-19 19:40',
+    sourse:'锻件网',
+    time:'2017-9-19 19:30',
     watched:1034,
-    content:`T9性能和T8和T8A相似，可用于<a href="http://www.duanzaochina.com">锻件</a>加工，锻件网推荐。T9用于制造硬度较高，有一定韧性但不受剧烈振动冲击的工具，如中心铳、冲模、冲头、木材切削工具及饲料机的刀片、凿岩石用的凿子等工具。<br/>
-              <br/>中文名 T9碳素工具钢 <br/>
-              牌 &nbsp;号 T9 <br/>
-              标 &nbsp;准 GB/T 1298－1986 <br/>
-              用 &nbsp;途 制造硬度较高，有一定韧性工具<br/><br/>
-
-              <img src="https://img.ithome.com/newsuploadfiles/2017/5/20170527_143259_644.jpg" />
-              <br/>
-              <br/>
-              材料名称：碳素工具钢<br/>
-              牌号：T9<br/>
-              标准：GB/T 1298－1986<br/>
-              特性及适用范围：T9性能和T8和T8A相似，T9用于制造硬度较高，有一定韧性但不受剧烈振动冲击的工具，如中心铳、冲模、冲头、木材切削工具及饲料机的刀片、凿岩石用的凿子等工具。<br/>
-              <br/>
-              化学成份<br/>
-              碳 C ：0．85～0．94<br/>
-              硅 Si：≤0．35<br/>
-              锰 Mn：≤0．40<br/>
-              硫 S ：≤0．030<br/>
-              磷 P ：≤0．035<br/>
-              铬 Cr：答应残余含量≤0．25、≤0．10（制造铅浴淬火钢丝时）<br/>
-              镍 Ni：答应残余含量≤0．20、≤0．12（制造铅浴淬火钢丝时）<br/>
-              铜 Cu：答应残余含量≤0．30、≤0．20（制造铅浴淬火钢丝时）<br/>
-              注：答应残余含量Cr Ni Cu≤0．40（制造铅浴淬火钢丝时）<br/>
-              <br/>
-              力学性能<br/>
-              硬度：退火，≤192HB，压痕直径≥4．35mm;淬火，≥62HRC<br/>
-              热处理规范：试样淬火760～780℃，水冷。<br/>
-              交货状态：钢材以退火状态交货。经双方协议，也可以不退火状态交货。<br/>`,
-    other:[
-      {
-        title:'T8材质-T8化学成分和机械性能',
-        link:''
-      },
-      {
-        title: '45#材质_机械性能_化学成分 - 锻件百科',
-        link: ''
-      },
-      {
-        title: 'T8材质-T8化学成分和机械性能',
-        link: ''
-      },
-      {
-        title: '70Mn锻件-机械性能-化学成分-70Mn锻件百科',
-        link: ''
-      }
-    ]
+    content:``,
+    other:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    WxParse.wxParse('content', 'html', this.data.content, this, 20);
+
+
+    var that = this;
+    wx.getSystemInfo({
+      success: function (res) {
+          that.setData({
+             screenWidth: res.screenWidth,
+             screenHeight: res.screenHeight
+          });
+       }
+    });
+    if(options.newsid){
+
+      that.setData({
+        newsid:options.newsid
+      })
+
+      that.detailRequest();
+    }else{
+      that.detailRequest();
+    }
+
+    // 时间格式转化函数
+    Date.prototype.Format = function(fmt){  
+      var o = {  
+           "M+": this.getMonth()+1,  
+           "d+": this.getDate(),  
+           "H+": this.getHours(),  
+           "m+": this.getMinutes(),  
+           "s+": this.getSeconds(),  
+           "S+": this.getMilliseconds()  
+      };   
+
+      if(/(y+)/.test(fmt)){  
+    
+          fmt=fmt.replace(RegExp.$1,(this.getFullYear()+"").substr(4-RegExp.$1.length));  
+      }  
+      for(var k in o){  
+          if (new RegExp("(" + k +")").test(fmt)){  
+              fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(String(o[k]).length)));  
+          }  
+      }     
+      return fmt;  
+    }   
+
+    // 通过util的方法发送请求
+    
+    console.log(this.data.catid)
+    
     wx.setNavigationBarTitle({
       title: '咨询详情'
     })
   },
-  /**
-   * 监听页面滚动
-   */
-  // onPageScroll: function(){
-  //   this.toTopStatus = true;
-  //   // if(screenTop==0){
-  //   //   this.toTopStatus = false;
-  //   // }else{
-  //   //   this.toTopStatus = true;
-  //   // }
-  // },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    
   },
 
   /**
@@ -145,5 +140,47 @@ Page({
     wx.pageScrollTo({
       scrollTop: 0,
     });
+  },
+
+  //跳转到其他新闻
+  toOther: function(eve){
+    var newsid = eve.currentTarget.dataset.newsid;
+    wx.navigateTo({
+      url: 'newsDetail?newsid='+newsid
+    })
+  },
+  // 封装起请求函数
+  detailRequest: function(){
+    var that = this;
+    util.newsDetail(that.data.newsid,function(data){
+      var time = new Date(data[0].addtime*1000);
+      console.log(data[0])
+
+      that.setData({
+        title: data[0].title,
+        content:data[0].content,
+        watched:data[0].hits,
+        catid:data[0].catid,
+        time:time.Format("yyyy-MM-dd HH:mm:ss")
+      })
+      WxParse.wxParse('content', 'html', that.data.content, that, 20);
+      // 通过util获取更多列表
+      util.moreNews(that.data.catid,function(data){
+        that.setData({
+          other: data
+        })
+      })
+    })
+  },
+  //时间戳转化为时间字符串
+  timetrans: function(date){
+    var date = new Date(date*1000);//如果date为10位不需要乘1000
+    var Y = date.getFullYear() + '-';
+    var M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
+    var D = (date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate()) + ' ';
+    var h = (date.getHours() < 10 ? '0' + date.getHours() : date.getHours()) + ':';
+    var m = (date.getMinutes() <10 ? '0' + date.getMinutes() : date.getMinutes()) + ':';
+    var s = (date.getSeconds() <10 ? '0' + date.getSeconds() : date.getSeconds());
+    return Y+M+D+h+m+s;
   }
 })

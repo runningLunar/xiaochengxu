@@ -60,14 +60,59 @@ class Reg extends \think\Controller{
           return "2";
       }else{
     
+          $hash=$this->random(6);
           db("member")->insert(['mobile'=>input("userPhone"),
            'password'=>md5(input("password")),
            'username'=> input("username"),
            'passport'=>input("username"),
-           'email'=>"1090018789@qq.com"
+           'email'=>input("username "), 
+           'passsalt'=>$hash
+           ]);
+
+
+/*发送邮件内容*/
+          $content=' <table cellpadding="0" cellspacing="0" width="700" align="center">
+<tr>
+<td><a href="http://localhost/destoon/" target="_blank"><img src="../../../../images/logo2.png" style="margin:10px 0;border:none;" alt="DESTOON B2B网站管理系统 LOGO" title="DESTOON B2B网站管理系统"/></a></td>
+</tr>
+<tr>
+<td style="border-top:solid 1px #DDDDDD;border-bottom:solid 1px #DDDDDD;padding:10px 0;line-height:200%;font-family:Microsoft YaHei,Verdana,Arial;font-size:14px;color:#333333;">
+尊敬的会员：<br/>
+恭喜您成功注册成为DESTOON B2B网站管理系统会员！<br/>
+以下为您的会员帐号信息：<br/>
+<strong>户名：</strong>'.input("username").'<br/>
+<strong>密码：</strong>'.input("password").'<br/>
+请您妥善保存，切勿告诉他人。<br/>
+如果您在使用过程中遇到任何问题，欢迎随时与我们取得联系。<br/>
+</td>
+</tr>
+<tr>
+<td style="line-height:22px;padding:10px 0;font-family:Microsoft YaHei,Verdana,Arial;font-size:12px;color:#666666;">
+请注意：此邮件系 <a href="http://localhost/destoon/" target="_blank" style="color:#005590;">DESTOON B2B网站管理系统</a> 自动发送，请勿直接回复。如果此邮件不是您请求的，请忽略并删除
+</td>
+</tr>
+</table>';
+
+             db("message")->insert(['title'=>'欢迎加入DESTOON B2B网站管理系统',
+           'content'=>$content,
+           'addtime'=> time(),
+           'touser'=>input("username"),
            ]);
           return "1";
       }
   }
+//随机生成passsalt
+function random($length, $chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz') {
+  $hash = '';
+  $max = strlen($chars) - 1;
+  for($i = 0; $i < $length; $i++) {
+    $hash .= $chars[mt_rand(0, $max)];
+  }
+  return $hash;
 }
+
+}
+
+
+
 ?>    

@@ -26,11 +26,14 @@ class Zixun extends \think\Controller
     	else{
     		$where_sql='';
     	}
-    	   $zixun_list=db("article_21")
-     			->alias("a")
-         ->field("a.areaid,a.catid,a.itemid,a.title,c.catname")
+    	 $zixun_list=db("article_21")
+                ->alias("a")
+         ->field("a.areaid,a.catid,a.itemid,a.title,c.catname,d.content,a.username,m.truename,m.mobile,m.qq,m.career,m.email,m.edittime,o.company,o.telephone,o.fax,o.address,o.regcity")
          ->where($where_sql)
          ->join("category c","c.catid = a.catid")
+          ->join("article_data_21 d","d.itemid=a.itemid")
+          ->join("member m","a.username=m.username")
+          ->join("company o","a.username=o.username")
         ->order("itemid asc")
         ->paginate(10);
     	// 分页

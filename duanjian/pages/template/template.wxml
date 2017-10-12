@@ -1,26 +1,14 @@
 <template name="item">
    <view class="container">
-      <view class="share">
-         <view class='content'>
-            <image src='../../images/app.png'></image>
-            <text>触摸版</text>
-         </view>
-         <view class='content'>
-            <image src='../../images/xon.png'></image>
-            <text>电脑版</text>
-         </view>
-         <view class='content'>
-            <image src='../../images/ewm.png'></image>
-            <text>微信版</text>
-         </view>
+   <view class='title'>
+  <text>联系我时，请说是在锻件网看到的，谢谢!</text>
+  <text>找锻件-买法兰-就上中国锻件网</text>
+</view>
+      <view class='image'>
+      <image src='../../images/11.jpg'></image>
+       <image src='../../images/12.jpg'></image>
       </view>
-      <view class='login'>
-         <text>登录/注册</text>
-         <text>意见反馈</text>
-         <text>联系方式</text>
-         <text>关于我们</text>
-      </view>
-      <text class='foot'>站点地图 Copyright by 中国锻件网</text>
+      <text class='foot'>更多锻件资讯请关注 锻件网 www.duanzaochina.com</text>
    </view>
 </template>
 

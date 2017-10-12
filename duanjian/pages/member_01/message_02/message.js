@@ -1,4 +1,6 @@
 // pages/message/message.js
+var data = require("../../../utils/message.js");
+const app = getApp();
 Page({
 
   /**
@@ -18,64 +20,31 @@ Page({
       delta: 1
     })
   },
-  detail:function(){
+  detail:function(ev){
+     var id = ev.currentTarget.dataset.id;
     wx.navigateTo({
-      url: 'msg-detail_03/detail'
+      url: 'msg-detail_03/detail?id='+id
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+     this.getMessage();
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
+   getMessage:function(){
+      var username = app.globalData.member.username;
+      var that=this;
+      data.getMessage(function(data){
+      
+         var arr = [];
+         for (var i = 0; i < data.length; i++) {
+            arr.push({ title: data[i].title, fromuser: data[i].fromuser,  addtime: new Date(data[i].addtime * 1000).toLocaleString().replace(/:\d{1,2}$/, ' ') })
+            that.setData({
+               message: arr
+            });
+         }
+         app.globalData.message=data;
+      },'kerris')
+   }
 })

@@ -22,5 +22,15 @@ class Category extends \think\Controller
         ->select(); 
         return json($Category);
     }
+
+        //查找类型
+        public function getCategory(){
+            $parentid=input('catid');
+            $Category=db("category")
+            ->field("catname")
+            ->where(" parentid='$parentid'")
+            ->find();
+            return json($Category);
+        }
 }
 ?>    

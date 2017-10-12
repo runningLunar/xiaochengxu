@@ -1,30 +1,16 @@
 <!-- 站内信件 -->
 
   <view class="box">
-    <view class='content'>
-      <view class='demo' bindtap='detail'>
-      <view class='theme'>欢迎加入中国锻件网</view>
+    <view class='content' wx:for="{{message}}"  data-id="{{index}}"  bindtap='detail'>
+      <view class='demo'>
+      <view class='theme'>{{item.title}}</view>
       <view class='remark'>
-        <text class='sender'>系统信使</text>
-        <text class='date'>2017/09/11 18:32</text>
+        <text class='sender'>{{item.fromuser?item.fromuser:'系统信使'}}</text>
+        <text class='date'>{{item.addtime}}</text>
       </view>
       </view>
     </view>
-
   </view>
-
-  <view class="shadow {{shadow?'hide':'show'}}" bindtap='show_shadow'> 
-  </view>
-  <view class="foot-menu {{shadow?'hide':'show'}}">
-      <view>
-        <view class='item menu'>发送消息</view>
-        <view class='item red'>发送消息</view>
-        <view class='item red'>消息搜索</view>
-      </view>
-      <view class='delete' bindtap='show_shadow'>
-        <text class='blue item'>取消</text>
-      </view>
-    </view>
 
 
 

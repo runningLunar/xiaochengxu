@@ -19,9 +19,9 @@ class Factory extends \think\Controller
     	}else if($keyword && !empty($arraychildId)&& empty($catId)){
 				$where_sql="a.keyword  LIKE '%$keyword%' and a.areaid in($arraychildId)";
     	}else if($keyword && empty($arraychildId)&& !empty($catId)){
-    				$where_sql="a.keyword  LIKE '%$keyword%' and a.catid like '%$catId%'";
+    				$where_sql="a.keyword  LIKE '%$keyword%' and a.catid Like '%$catId%'";
     	}else if ($keyword && !empty($arraychildId)&& !empty($catId)) {
-    		$where_sql="a.keyword  LIKE '%$keyword%' and like '%$catId%' and a.areaid in($arraychildId)";
+    		$where_sql="a.keyword  LIKE '%$keyword%' and a.catid Like '%$catId%' and a.areaid in($arraychildId)";
     	}
     	else{
     		$where_sql='';
@@ -29,7 +29,9 @@ class Factory extends \think\Controller
     	   $zixun_list=db("company")
      			->alias("a")
          ->where($where_sql)
-         ->join("area c","c.areaid = a.areaid")
+         ->field("a.areaid,a.catid,a.userid,a.company,d.content,a.sell,a.address,a.telephone,a.username")
+          ->join("area c","c.areaid = a.areaid")
+        ->join("company_data d","d.userid=a.userid")
         ->order("userid desc")
         ->paginate(10);
     	// 分页

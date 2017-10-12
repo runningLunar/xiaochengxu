@@ -64,43 +64,59 @@ width: 70% !important;
   height:200rpx; 
   margin-left:30rpx; 
 }
-.contentt .xianxi .right{
+.contentt .xianxi .rightt{
   width: 70%;
   flex-direction: row;
+  margin-left: 20rpx;
 }
 
-.contentt .xianxi .right .company{
+.contentt .xianxi .rightt .company{
   font-size: 30rpx;
     color: #757575;
 }
-.contentt .xianxi .right .name{
+.contentt .xianxi .rightt .name{
   font-size:32rpx;
   margin-top: 25rpx;
   margin-left: 10rpx;
 
 }
-.contentt .xianxi .right .keyword{
+.contentt .xianxi .rightt .keyword{
   font-size:25rpx;
   margin-top: 15rpx;
   margin-left: 10rpx;
 color: #757575;
 }
-.contentt .xianxi .right .time-add{
+.contentt .xianxi .rightt .time-add{
    display: flex;
-   margin: 0px;
-   height: 0px;
+   margin: 20rpx 0rpx;
 }
-.contentt .xianxi .right .address,.contentt .xianxi .right .time{
+.contentt .xianxi .rightt .address,.contentt .xianxi .rightt .time{
      font-size:25rpx;
   margin-left: 10rpx;
 color: #757575;
-margin-bottom: 20rpx;
 border: none;
 flex: auto;
-display: block;
-   text-align:left;
+   text-align:center;
+      padding: 5rpx;
 }
-
+.contentt .xianxi .rightt .address{
+     border: solid 1rpx ;
+border-radius: 10rpx;
+color: #ffc107;
+border-color: #ffc107;
+margin-left:10rpx; 
+}
+.contentt .xianxi .rightt .cate{
+       font-size:25rpx;
+  margin-left: 10rpx;
+flex: auto;
+   text-align:center;
+   border: solid 1rpx gray;
+   padding: 5rpx;
+   color: #03a9f4;
+border-color: #03a9f4;
+border-radius: 10rpx;
+}
 .page{
   width: 85%;
   margin: 0rpx auto;

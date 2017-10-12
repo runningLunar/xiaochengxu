@@ -1,7 +1,7 @@
 <?php
 namespace app\api\controller;
 
-class Exhibit extends \think\Controller
+class Club extends \think\Controller
 {
     public function get()
     {
@@ -29,7 +29,9 @@ class Exhibit extends \think\Controller
            $zixun_list=db("club")
                 ->alias("a")
          ->where($where_sql)
+           ->field("a.areaid,a.catid,a.itemid,a.title,c.areaname,d.content")
          ->join("area c","c.areaid = a.areaid")
+         ->join("club_data d","d.itemid=a.itemid")
         ->order("itemid desc")
         ->paginate(10);
         // 分页

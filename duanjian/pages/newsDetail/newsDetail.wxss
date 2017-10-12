@@ -49,6 +49,12 @@ icon{
 .share-btn icon{
   font-size: 2rem;
 }
+.share-btn .shareimg{
+  margin-top: 1rem;
+  margin-left: 1rem;
+  width: 2rem;
+  height: 2rem;
+}
 .other{
   padding: 1rem;
   font-size: 0.9rem;

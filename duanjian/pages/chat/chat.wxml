@@ -1,0 +1,5 @@
+<!--pages/chat/chat.wxml-->
+<view><text>123213123</text></view>
+<view><text>123213123</text></view>
+<view><textarea placeholder='正文'></textarea></view>
+<view><button class='btn'>发送</button></view>

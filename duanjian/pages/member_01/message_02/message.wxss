@@ -6,7 +6,7 @@ page{
 }
 
 .box{
-  background: #fff;
+
 }
 .top{
   display: flex;
@@ -17,10 +17,15 @@ page{
   line-height: 60rpx;
   color: #fff;
 }
+.content:first-child{
+    margin-top: 30rpx;
+}
 .content{
+     background: #fff;
   padding: 32rpx;
   font-size: 38rpx;
   word-spacing: 25rpx;
+  margin-bottom: 30rpx;
 }
 .demo{
   margin-bottom: 20rpx;
@@ -34,46 +39,6 @@ page{
   display: flex;
   justify-content: space-between;
 }
-/* End */
-/* shadow Start */
-.shadow{
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.3);
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 20rpx;
-}
-.foot-menu{
-  position: absolute;
-  bottom: 100rpx;
-  left: 20rpx;
-  background: #F8F8F8;
-  width: 710rpx;
-  border-radius: 10rpx;
-}
-.item{
-  height: 90rpx;
-  line-height: 90rpx;
-  text-align: center;
-}
-.menu{
-  color: #999;
-  font-size: 28rpx;
-}
-.delete{
-  text-align: center;
-}
-.blue{
-  color: #007AFF;
-}
-.red{
-   color: #f00;
-}
-.hide{
-  display: none;
-}
-.show{
-  display: block;
+.sender,.date{
+   font-size: 28rpx;
 }
